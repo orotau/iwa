@@ -1,0 +1,5 @@
+[graham-laptop]
+iwa_path = /home/graham/PythonProjects/webfaction_home/webapps/pk_cp/iwa/
+
+[web238.webfaction.com]
+iwa_path = /home/orotau/webapps/pk_cp/iwa/

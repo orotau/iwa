@@ -1,0 +1,44 @@
+<style type="text/css">
+
+table.iwa{
+    border-collapse:collapse;
+    margin-left:auto; 
+    margin-right:auto;
+    margin-bottom: 20px; 
+    margin-top: 20px;
+}
+
+tr.iwa{} /* just in case bootstrap sets something*/
+
+td.iwa{
+    width:6em;
+    height:6em;
+    border-width:0.3em;
+    border-style: solid;
+    text-align: center;
+    {% if children_count < 21 %}border-color:brown;{% endif %}
+    {% if 21 <= children_count <= 50 %}border-color:purple;{% endif %}
+    {% if 51 <= children_count <= 100 %}border-color:gray;{% endif %}
+    {% if children_count > 100 %}border-color:green;{% endif %}
+}
+
+div.iwa{
+    font-size:5em; /*ok*/
+    line-height: 1; /* override bootstrap */
+}
+
+/*remove border in the middle of any digraphs*/
+{% if 0 in digraph_starts %}#koru0{border-right-style: hidden;}{% endif %}
+{% if 1 in digraph_starts %}#koru1{border-right-style: hidden;}{% endif %}
+{% if 6 in digraph_starts %}#koru6{border-right-style: hidden;}{% endif %}
+{% if 5 in digraph_starts %}#koru5{border-right-style: hidden;}{% endif %}
+	
+
+#koru8{
+    {% if children_count < 21 %}color:brown;{% endif %}
+    {% if 21 <= children_count <= 50 %}color:purple;{% endif %}
+    {% if 51 <= children_count <= 100 %}color:gray;{% endif %}
+    {% if children_count > 100 %}color:green;{% endif %}
+}
+
+</style>

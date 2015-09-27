@@ -1,0 +1,28 @@
+{% extends "index.html" %}
+
+{% block title %}About{% endblock title %}
+
+{% block head %}
+{{ super() }}
+<style>
+/*for the text*/
+p.about{
+	text-align:justify;
+}
+</style>
+{% endblock head %}
+
+{% block main_content %}
+	<div class="jumbotron">          
+	  <p class="lead about">Each board has a Koru which is the identity of the board. Imagine starting at the top left
+	  square and tracing a koru clockwise to the middle, that is the koru.</p>
+	  <p class="lead about">The words come from He Pātaka Kupu (mainly headwords). I copied them by hand and then wrote some python computer
+	  code to check that they were correct.</p>
+	  <p class="lead about">The words chosen were those which are all lowercase and free of punctuation.</p>
+	  <p class="lead about">The game is designed to be played 'old school' with pen and paper, or just your roro.</p>
+	  <p class="lead about">Feel free to give <a href="./contact">feedback</a> of any sort. Go well!</p>
+	</div>
+{% endblock main_content %}
+
+
+

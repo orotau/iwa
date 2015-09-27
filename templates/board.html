@@ -1,0 +1,19 @@
+{% extends "index.html" %}
+
+{% block title %}{{koru}}{% endblock title %}
+
+{% block head %}
+{{ super() }}
+{% include "board_internal_css.html" %} 
+{% endblock head %}
+
+{% block main_content %}
+<h1 class="text-center"><a style="color:black;" href="./about">Koru</a> : {{koru}}</h1>
+<h1 class="text-center">Rorohiko : {{children_count}} kupu</h1>
+
+{% include "board_core.html" %}
+
+<div class="text-center">
+<a class="btn btn-primary" style="margin-bottom:20px;" href="./boardchildren?koru={{koru}}" role="button">Ngā kupu</a>
+</div>
+{% endblock main_content %}

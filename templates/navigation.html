@@ -1,0 +1,15 @@
+		<ul class="nav nav-pills nav-justified">				
+				{% set navigation_bar = [
+		      ('./', 'index', 'Home'),
+            ('./createboard', 'createboard', 'Create Board'),
+            ('./howtoplay', 'howtoplay', 'How to Play'),
+            ('./about', 'about', 'About'),
+            ('./contact', 'contact', 'Contact'),
+            ] %}     
+            
+				{% for href, jt_id, caption in navigation_bar %}
+  				    <li role="presentation" {% if jt_id == template_id %} class="active"{% endif %}>
+  				    <a href="{{ href|e }}">{{ caption|e }}</a>
+  				    </li>
+				{% endfor %}
+		 </ul>

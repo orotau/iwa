@@ -1,0 +1,13 @@
+{% extends "index.html" %}
+{% block title %}Create Board{% endblock title%}
+{% block main_content %}
+<div class="text-center">
+<p class="lead">The maximum number of child words that can be made from a board varies between 1 and 265.</p>
+<p class="lead">Click on one of the links below to create a board.</p>
+<h3><a href="./board?koru={{koru001}}">Any number of child words</a></h3>
+<h3><a style="color:brown;" href="./board?koru={{koru001020}}">20 child words or less</a></h3>
+<h3><a style="color:purple;" href="./board?koru={{koru021050}}">21 to 50 child words</a></h3>
+<h3><a style="color:gray;" href="./board?koru={{koru051100}}">51 to 100 child words</a></h3>
+<h3><a style="color:green;" href="./board?koru={{koru101}}">Over 100 child words</a></h3>
+</div>
+{% endblock main_content %}
