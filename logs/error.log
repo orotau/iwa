@@ -12616,3 +12616,20 @@ TypeError: an integer is required (got type str)
 [28/Sep/2015:20:04:38] ENGINE Bus EXITING
 [28/Sep/2015:20:04:38] ENGINE Bus EXITED
 [28/Sep/2015:20:04:38] ENGINE Waiting for child threads to terminate...
+[28/Sep/2015:20:18:10] ENGINE Listening for SIGUSR1.
+[28/Sep/2015:20:18:10] ENGINE Listening for SIGTERM.
+[28/Sep/2015:20:18:10] ENGINE Listening for SIGHUP.
+[28/Sep/2015:20:18:10] ENGINE Bus STARTING
+[28/Sep/2015:20:18:10] ENGINE Started monitor thread '_TimeoutMonitor'.
+[28/Sep/2015:20:18:10] ENGINE Started monitor thread 'Autoreloader'.
+[28/Sep/2015:20:18:10] ENGINE Serving on http://0.0.0.0:8090
+[28/Sep/2015:20:18:10] ENGINE Bus STARTED
+[28/Sep/2015:20:19:09] ENGINE Keyboard Interrupt: shutting down bus
+[28/Sep/2015:20:19:09] ENGINE Bus STOPPING
+[28/Sep/2015:20:19:09] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 8090)) shut down
+[28/Sep/2015:20:19:09] ENGINE Stopped thread '_TimeoutMonitor'.
+[28/Sep/2015:20:19:09] ENGINE Stopped thread 'Autoreloader'.
+[28/Sep/2015:20:19:09] ENGINE Bus STOPPED
+[28/Sep/2015:20:19:09] ENGINE Bus EXITING
+[28/Sep/2015:20:19:09] ENGINE Bus EXITED
+[28/Sep/2015:20:19:09] ENGINE Waiting for child threads to terminate...

@@ -312,7 +312,7 @@ class PangaKupu():
             try:
                 smtp = SMTP('smtp.webfaction.com', timeout=10)  # 10 seconds
             except:
-                cherrypy.log("EMAIL FAIL " + contents)
+                cherrypy.log("EMAIL FAIL 1" + contents)
                 raise
             else:
                 with smtp:
@@ -321,7 +321,9 @@ class PangaKupu():
                         mail_access_info = self.get_mail_access_info()
                         smtp.login(mail_access_info[0], mail_access_info[1])
                     except:
-                        cherrypy.log("EMAIL FAIL " + contents)
+                        cherrypy.log("EMAIL FAIL 2" + contents)
+                        cherrypy.log("EMAIL FAIL 2 : user" + mail_access_info[0])
+                        cherrypy.log("EMAIL FAIL 2 : pwd" + mail_access_info[1])
                         raise
                     else:
                         try:
@@ -332,7 +334,7 @@ class PangaKupu():
                             msg['Subject'] = subject
                             smtp.send_message(msg)
                         except:
-                            cherrypy.log("EMAIL FAIL " + contents)
+                            cherrypy.log("EMAIL FAIL 3" + contents)
                             raise
 
     def process_all_errors(self, status, message, traceback, version):
