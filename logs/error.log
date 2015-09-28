@@ -12505,3 +12505,20 @@ cherrypy.process.wspbus.ChannelFailures: OSError("Port 8090 not free on '0.0.0.0
 [28/Sep/2015:12:34:08] ENGINE Bus EXITING
 [28/Sep/2015:12:34:08] ENGINE Bus EXITED
 [28/Sep/2015:12:34:08] ENGINE Waiting for child threads to terminate...
+[28/Sep/2015:17:50:32] ENGINE Listening for SIGUSR1.
+[28/Sep/2015:17:50:33] ENGINE Listening for SIGTERM.
+[28/Sep/2015:17:50:33] ENGINE Listening for SIGHUP.
+[28/Sep/2015:17:50:33] ENGINE Bus STARTING
+[28/Sep/2015:17:50:33] ENGINE Started monitor thread '_TimeoutMonitor'.
+[28/Sep/2015:17:50:33] ENGINE Started monitor thread 'Autoreloader'.
+[28/Sep/2015:17:50:33] ENGINE Serving on http://0.0.0.0:8090
+[28/Sep/2015:17:50:33] ENGINE Bus STARTED
+[28/Sep/2015:17:51:23] ENGINE Keyboard Interrupt: shutting down bus
+[28/Sep/2015:17:51:23] ENGINE Bus STOPPING
+[28/Sep/2015:17:51:23] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 8090)) shut down
+[28/Sep/2015:17:51:23] ENGINE Stopped thread '_TimeoutMonitor'.
+[28/Sep/2015:17:51:23] ENGINE Stopped thread 'Autoreloader'.
+[28/Sep/2015:17:51:23] ENGINE Bus STOPPED
+[28/Sep/2015:17:51:23] ENGINE Bus EXITING
+[28/Sep/2015:17:51:23] ENGINE Bus EXITED
+[28/Sep/2015:17:51:23] ENGINE Waiting for child threads to terminate...

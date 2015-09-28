@@ -11,19 +11,19 @@ import config
 
 
 def get_db_access_info():
-    crac = cherrypy.request.app.config
-    test_or_production = crac['pangakupu']['test_or_production']
+    cf = config.ConfigFile()
+    test_or_production = (cf.configfile[cf.computername]['test_or_production'])
 
     if test_or_production == 'test':
-        db_name = crac['test_database']['test_database']
-        db_user = crac['test_database']['user']
-        db_password = keyring.get_password(crac['test_database']
+        db_name = cf.configfile[cf.computername]['database']
+        db_user = cf.configfile[cf.computername]['user']
+        db_password = keyring.get_password(cf.configfile[cf.computername]
                                                ['id'], db_user)
 
     elif test_or_production == 'production':
-        db_name = crac['production_database']['production_database']
-        db_user = crac['production_database']['user']
-        db_password = keyring.get_password(crac['production_database']
+        db_name = cf.configfile[cf.computername]['database']
+        db_user = cf.configfile[cf.computername]['user']
+        db_password = keyring.get_password(cf.configfile[cf.computername]
                                                ['id'], db_user)
 
     return db_name, db_user, db_password

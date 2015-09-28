@@ -12,7 +12,7 @@ class ConfigFile():
     # Otherwise you will just get the last entry for the computer!
 
     config_paths = {
-        'graham-laptop': '/home/graham/PythonProjects/cp/config.txt'
+        'graham-laptop': '/home/graham/PythonProjects/webfaction_home/webapps/pk_cp/conf/config.txt',
         'web238.webfaction.com': '/home/orotau/webapps/pk_cp/conf/config.txt'
         }
 
@@ -25,7 +25,7 @@ class ConfigFile():
         return socket.gethostname()
 
     def getPath(self):
-        try:ls
+        try:
             return self.config_paths[self.computername]
         except KeyError:
             raise

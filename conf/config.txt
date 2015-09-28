@@ -1,5 +1,13 @@
 [graham-laptop]
 iwa_path = /home/graham/PythonProjects/webfaction_home/webapps/pk_cp/iwa/
+test_or_production = test
+id = test_database_password
+user = kereama
+database = pango
 
 [web238.webfaction.com]
 iwa_path = /home/orotau/webapps/pk_cp/iwa/
+test_or_production = production
+id = production_database_password
+user = kereama
+database = kakariki

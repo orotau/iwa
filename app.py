@@ -5,6 +5,7 @@ import pangakupu as pk
 import pū
 import maoriword as mw
 import pg_utils
+import config
 
 
 class PangaKupu():
@@ -154,8 +155,8 @@ class PangaKupu():
         Need to connect to an smtp server
         Will probably be different from test to production
         '''
-        crac = cherrypy.request.app.config
-        test_or_production = crac['pangakupu']['test_or_production']
+        cf = config.ConfigFile()
+        test_or_production = (cf.configfile[cf.computername]['test_or_production'])
 
         # subject
         subject = (test_or_production.upper() +
@@ -295,8 +296,8 @@ class PangaKupu():
 
     def send_mail(self, fromm, to, subject, contents):
 
-        crac = cherrypy.request.app.config
-        test_or_production = crac['pangakupu']['test_or_production']
+        cf = config.ConfigFile()
+        test_or_production = (cf.configfile[cf.computername]['test_or_production'])
 
         if test_or_production == 'test':
             # connect to smtp server for greenbay.graham@gmail.com
@@ -336,8 +337,8 @@ class PangaKupu():
 
     def process_all_errors(self, status, message, traceback, version):
 
-        crac = cherrypy.request.app.config
-        test_or_production = crac['pangakupu']['test_or_production']
+        cf = config.ConfigFile()
+        test_or_production = (cf.configfile[cf.computername]['test_or_production'])
 
         subject = (test_or_production.upper() +
                    ' ENVIRONMENT - Pangakupu - ' + status)
