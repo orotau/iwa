@@ -12522,3 +12522,97 @@ cherrypy.process.wspbus.ChannelFailures: OSError("Port 8090 not free on '0.0.0.0
 [28/Sep/2015:17:51:23] ENGINE Bus EXITING
 [28/Sep/2015:17:51:23] ENGINE Bus EXITED
 [28/Sep/2015:17:51:23] ENGINE Waiting for child threads to terminate...
+[28/Sep/2015:20:02:41] ENGINE Listening for SIGTERM.
+[28/Sep/2015:20:02:41] ENGINE Listening for SIGHUP.
+[28/Sep/2015:20:02:41] ENGINE Listening for SIGUSR1.
+[28/Sep/2015:20:02:41] ENGINE Bus STARTING
+[28/Sep/2015:20:02:41] ENGINE Started monitor thread '_TimeoutMonitor'.
+[28/Sep/2015:20:02:41] ENGINE Started monitor thread 'Autoreloader'.
+[28/Sep/2015:20:02:42] ENGINE Error in HTTP server: shutting down
+Traceback (most recent call last):
+  File "/home/graham/Virtual-Environments/cp/lib/python3.4/site-packages/cherrypy/process/servers.py", line 206, in _start_http_thread
+    self.httpserver.start()
+  File "/home/graham/Virtual-Environments/cp/lib/python3.4/site-packages/cherrypy/wsgiserver/wsgiserver3.py", line 1639, in start
+    self.bind(af, socktype, proto)
+  File "/home/graham/Virtual-Environments/cp/lib/python3.4/site-packages/cherrypy/wsgiserver/wsgiserver3.py", line 1707, in bind
+    self.socket.bind(self.bind_addr)
+TypeError: an integer is required (got type str)
+
+[28/Sep/2015:20:02:42] ENGINE Bus STOPPING
+[28/Sep/2015:20:02:42] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', '8090')) already shut down
+[28/Sep/2015:20:02:42] ENGINE Stopped thread '_TimeoutMonitor'.
+[28/Sep/2015:20:02:42] ENGINE Stopped thread 'Autoreloader'.
+[28/Sep/2015:20:02:42] ENGINE Bus STOPPED
+[28/Sep/2015:20:02:42] ENGINE Bus EXITING
+[28/Sep/2015:20:02:42] ENGINE Bus EXITED
+[28/Sep/2015:20:03:20] ENGINE Listening for SIGHUP.
+[28/Sep/2015:20:03:20] ENGINE Listening for SIGUSR1.
+[28/Sep/2015:20:03:20] ENGINE Listening for SIGTERM.
+[28/Sep/2015:20:03:20] ENGINE Bus STARTING
+[28/Sep/2015:20:03:20] ENGINE Started monitor thread '_TimeoutMonitor'.
+[28/Sep/2015:20:03:20] ENGINE Started monitor thread 'Autoreloader'.
+[28/Sep/2015:20:03:20] ENGINE Serving on http://0.0.0.0:8090
+[28/Sep/2015:20:03:20] ENGINE Bus STARTED
+[28/Sep/2015:20:03:31] ENGINE Restarting because /home/graham/PythonProjects/webfaction_home/webapps/pk_cp/serve.py changed.
+[28/Sep/2015:20:03:31] ENGINE Stopped thread 'Autoreloader'.
+[28/Sep/2015:20:03:31] ENGINE Bus STOPPING
+[28/Sep/2015:20:03:31] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 8090)) shut down
+[28/Sep/2015:20:03:31] ENGINE Stopped thread '_TimeoutMonitor'.
+[28/Sep/2015:20:03:31] ENGINE Bus STOPPED
+[28/Sep/2015:20:03:31] ENGINE Bus EXITING
+[28/Sep/2015:20:03:31] ENGINE Bus EXITED
+[28/Sep/2015:20:03:31] ENGINE Waiting for child threads to terminate...
+[28/Sep/2015:20:03:31] ENGINE Re-spawning serve.py
+[28/Sep/2015:20:03:46] ENGINE Listening for SIGUSR1.
+[28/Sep/2015:20:03:46] ENGINE Listening for SIGHUP.
+[28/Sep/2015:20:03:46] ENGINE Listening for SIGTERM.
+[28/Sep/2015:20:03:46] ENGINE Bus STARTING
+[28/Sep/2015:20:03:46] ENGINE Started monitor thread '_TimeoutMonitor'.
+[28/Sep/2015:20:03:46] ENGINE Started monitor thread 'Autoreloader'.
+[28/Sep/2015:20:03:46] ENGINE Serving on http://0.0.0.0:8090
+[28/Sep/2015:20:03:46] ENGINE Bus STARTED
+[28/Sep/2015:20:04:02] ENGINE Restarting because /home/graham/PythonProjects/webfaction_home/webapps/pk_cp/serve.py changed.
+[28/Sep/2015:20:04:02] ENGINE Stopped thread 'Autoreloader'.
+[28/Sep/2015:20:04:02] ENGINE Bus STOPPING
+[28/Sep/2015:20:04:02] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 8090)) shut down
+[28/Sep/2015:20:04:02] ENGINE Stopped thread '_TimeoutMonitor'.
+[28/Sep/2015:20:04:02] ENGINE Bus STOPPED
+[28/Sep/2015:20:04:02] ENGINE Bus EXITING
+[28/Sep/2015:20:04:02] ENGINE Bus EXITED
+[28/Sep/2015:20:04:02] ENGINE Waiting for child threads to terminate...
+[28/Sep/2015:20:04:02] ENGINE Re-spawning serve.py
+[28/Sep/2015:20:04:03] ENGINE Listening for SIGTERM.
+[28/Sep/2015:20:04:03] ENGINE Listening for SIGUSR1.
+[28/Sep/2015:20:04:03] ENGINE Listening for SIGHUP.
+[28/Sep/2015:20:04:03] ENGINE Bus STARTING
+[28/Sep/2015:20:04:03] ENGINE Started monitor thread '_TimeoutMonitor'.
+[28/Sep/2015:20:04:03] ENGINE Started monitor thread 'Autoreloader'.
+[28/Sep/2015:20:04:04] ENGINE Serving on http://0.0.0.0:8090
+[28/Sep/2015:20:04:04] ENGINE Bus STARTED
+[28/Sep/2015:20:04:10] ENGINE Restarting because /home/graham/PythonProjects/webfaction_home/webapps/pk_cp/serve.py changed.
+[28/Sep/2015:20:04:10] ENGINE Stopped thread 'Autoreloader'.
+[28/Sep/2015:20:04:10] ENGINE Bus STOPPING
+[28/Sep/2015:20:04:10] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 8090)) shut down
+[28/Sep/2015:20:04:10] ENGINE Stopped thread '_TimeoutMonitor'.
+[28/Sep/2015:20:04:10] ENGINE Bus STOPPED
+[28/Sep/2015:20:04:10] ENGINE Bus EXITING
+[28/Sep/2015:20:04:10] ENGINE Bus EXITED
+[28/Sep/2015:20:04:10] ENGINE Waiting for child threads to terminate...
+[28/Sep/2015:20:04:10] ENGINE Re-spawning serve.py
+[28/Sep/2015:20:04:11] ENGINE Listening for SIGTERM.
+[28/Sep/2015:20:04:11] ENGINE Listening for SIGHUP.
+[28/Sep/2015:20:04:11] ENGINE Listening for SIGUSR1.
+[28/Sep/2015:20:04:11] ENGINE Bus STARTING
+[28/Sep/2015:20:04:11] ENGINE Started monitor thread '_TimeoutMonitor'.
+[28/Sep/2015:20:04:11] ENGINE Started monitor thread 'Autoreloader'.
+[28/Sep/2015:20:04:11] ENGINE Serving on http://0.0.0.0:8090
+[28/Sep/2015:20:04:11] ENGINE Bus STARTED
+[28/Sep/2015:20:04:38] ENGINE Keyboard Interrupt: shutting down bus
+[28/Sep/2015:20:04:38] ENGINE Bus STOPPING
+[28/Sep/2015:20:04:38] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 8090)) shut down
+[28/Sep/2015:20:04:38] ENGINE Stopped thread '_TimeoutMonitor'.
+[28/Sep/2015:20:04:38] ENGINE Stopped thread 'Autoreloader'.
+[28/Sep/2015:20:04:38] ENGINE Bus STOPPED
+[28/Sep/2015:20:04:38] ENGINE Bus EXITING
+[28/Sep/2015:20:04:38] ENGINE Bus EXITED
+[28/Sep/2015:20:04:38] ENGINE Waiting for child threads to terminate...

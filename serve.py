@@ -1,7 +1,6 @@
 import os.path
 import cherrypy
 
-
 class Server():
     def __init__(self):
 
@@ -35,5 +34,13 @@ class Server():
 
 
 if __name__ == '__main__':
+    import config
+    cf = config.ConfigFile()
+
+    cherrypy.config.update({
+        'server.socket_host': cf.configfile[cf.computername]['socket_host'],
+        'server.socket_port': int(cf.configfile[cf.computername]['socket_port']),
+        'engine.autoreload.on': cf.configfile[cf.computername]['autoreload']
+    })
 
     Server().run()

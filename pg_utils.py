@@ -12,18 +12,9 @@ import config
 
 def get_db_access_info():
     cf = config.ConfigFile()
-    test_or_production = (cf.configfile[cf.computername]['test_or_production'])
-
-    if test_or_production == 'test':
-        db_name = cf.configfile[cf.computername]['database']
-        db_user = cf.configfile[cf.computername]['user']
-        db_password = keyring.get_password(cf.configfile[cf.computername]
-                                               ['id'], db_user)
-
-    elif test_or_production == 'production':
-        db_name = cf.configfile[cf.computername]['database']
-        db_user = cf.configfile[cf.computername]['user']
-        db_password = keyring.get_password(cf.configfile[cf.computername]
+    db_name = cf.configfile[cf.computername]['database']
+    db_user = cf.configfile[cf.computername]['user']
+    db_password = keyring.get_password(cf.configfile[cf.computername]
                                                ['id'], db_user)
 
     return db_name, db_user, db_password
