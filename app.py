@@ -348,7 +348,7 @@ class PangaKupu():
 
         subject = (test_or_production.upper() +
                    ' ENVIRONMENT - Pangakupu - ' + status)
-        fromm = "feedback@pangakupu.maori.nz"
+        fromm = "orotau@webfaction.com"
         to = "pangakupu@gmail.com"
         contents = status + message + traceback + version
 
