@@ -13,6 +13,7 @@ class ConfigFile():
 
     config_paths = {
         'graham-laptop': '/home/graham/PythonProjects/cp/config.txt'
+        'web238.webfaction.com': '/home/orotau/webapps/pk_cp/conf/config.txt'
         }
 
     def __init__(self):
@@ -24,7 +25,7 @@ class ConfigFile():
         return socket.gethostname()
 
     def getPath(self):
-        try:
+        try:ls
             return self.config_paths[self.computername]
         except KeyError:
             raise
