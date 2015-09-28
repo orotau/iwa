@@ -6,16 +6,14 @@ import config
 import json
 import maoriword as mw
 import psycopg2
-
-db_name = "pango"
-db_user = "kereama"
-db_pass = "heahatemeanui"
+import pg_utils
 
 def test_pangakupu_words():
 
-    with psycopg2.connect(database = db_name, 
-                          user = db_user, 
-                          password = db_pass) as connection:
+    db_access_info = pg_utils.get_db_access_info()
+    with psycopg2.connect(database=db_access_info[0],
+                          user=db_access_info[1],
+                          password=db_access_info[2]) as connection:
 
         with connection.cursor() as cursor:
 
