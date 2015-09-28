@@ -8,6 +8,12 @@ import pg_utils
 import config
 
 
+class Dummy():
+    @cherrypy.expose
+    def index(self):
+          raise cherrypy.HTTPRedirect('/iwa')
+
+
 class PangaKupu():
 
     def __init__(self, template_dir):
@@ -161,7 +167,7 @@ class PangaKupu():
         # subject
         subject = (test_or_production.upper() +
                    ' ENVIRONMENT - Pangakupu Feedback')
-        fromm = 'feedback@pangakupu.maori.nz'
+        fromm = 'orotau@webfaction.com'  # not used by gmail
         to = 'pangakupu@gmail.com'
         contents = feedback
 
@@ -312,7 +318,7 @@ class PangaKupu():
             try:
                 smtp = SMTP('smtp.webfaction.com', timeout=10)  # 10 seconds
             except:
-                cherrypy.log("EMAIL FAIL 1" + contents)
+                cherrypy.log("EMAIL FAIL 1 " + contents)
                 raise
             else:
                 with smtp:
@@ -321,9 +327,7 @@ class PangaKupu():
                         mail_access_info = self.get_mail_access_info()
                         smtp.login(mail_access_info[0], mail_access_info[1])
                     except:
-                        cherrypy.log("EMAIL FAIL 2" + contents)
-                        cherrypy.log("EMAIL FAIL 2 : user" + mail_access_info[0])
-                        cherrypy.log("EMAIL FAIL 2 : pwd" + mail_access_info[1])
+                        cherrypy.log("EMAIL FAIL 2 " + contents)
                         raise
                     else:
                         try:
@@ -334,7 +338,7 @@ class PangaKupu():
                             msg['Subject'] = subject
                             smtp.send_message(msg)
                         except:
-                            cherrypy.log("EMAIL FAIL 3" + contents)
+                            cherrypy.log("EMAIL FAIL 3 " + contents)
                             raise
 
     def process_all_errors(self, status, message, traceback, version):
@@ -348,11 +352,20 @@ class PangaKupu():
         to = "pangakupu@gmail.com"
         contents = status + message + traceback + version
 
-        self.send_mail(fromm, to, subject, contents)
-
-        template_id = 'error'
-        template = self.env.get_template(template_id + '.html')
-        return template.render({"template_id": template_id})
+        try:
+            self.send_mail(fromm, to, subject, contents)
+        except:
+            #error sending email
+            #don't raise another error
+            cherrypy.log("EMAIL FAIL 4 " + fromm)
+            cherrypy.log("EMAIL FAIL 4 " + to)
+            cherrypy.log("EMAIL FAIL 4 " + subject)
+            cherrypy.log("EMAIL FAIL 4 " + contents)
+        finally:
+            #make sure we show the correct error template, not the stack trace
+            template_id = 'error'
+            template = self.env.get_template(template_id + '.html')
+            return template.render({"template_id": template_id})
 
     def get_mail_access_info(self):
         crac = cherrypy.request.app.config
