@@ -42,7 +42,7 @@ if __name__ == '__main__':
     cherrypy.config.update({
         'server.socket_host': cf.configfile[cf.computername]['socket_host'],
         'server.socket_port': int(cf.configfile[cf.computername]['socket_port']),
-        'engine.autoreload.on': cf.configfile[cf.computername]['autoreload']
+        'engine.autoreload.on': cf.configfile[cf.computername].getboolean('autoreload')
     })
 
     Server().run()
