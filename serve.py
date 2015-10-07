@@ -30,7 +30,8 @@ class Server():
         See this URL for help
         http://docs.cherrypy.org/en/latest/basics.html#hosting-one-or-more-applications
         '''
-        cherrypy.tree.mount(self.dummyapp, '/')
+        cherrypy.tree.mount(self.dummyapp, '/',
+                            os.path.join(self.conf_dir, "dummy.cfg"))
         cherrypy.quickstart(self.webapp, '/iwa',
                             os.path.join(self.conf_dir, "app.cfg"))
 
