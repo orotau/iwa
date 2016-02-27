@@ -301,20 +301,44 @@ class PangaKupu():
                                 "digraph_starts": digraph_starts})
 
     def send_mail(self, fromm, to, subject, contents):
+        from smtplib import SMTP
 
         cf = config.ConfigFile()
         test_or_production = (cf.configfile[cf.computername]['test_or_production'])
 
         if test_or_production == 'test':
             # connect to smtp server for greenbay.graham@gmail.com
-            import yagmail
-            yag = yagmail.SMTP('greenbay.graham')
-            yag.send(to=to, subject=subject, contents=yagmail.raw(contents))
+            # http://goo.gl/5AMQVI
+            try:
+                smtp = SMTP("smtp.gmail.com", 587)
+                smtp.ehlo()
+                smtp.starttls()
+            except:
+                cherrypy.log("EMAIL FAIL 1 " + contents)
+                raise
+            else:
+                with smtp:
+                    try:
+                        # get username and password for the webfaction mailbox
+                        mail_access_info = self.get_mail_access_info(test_or_production)
+                        smtp.login(mail_access_info[0], mail_access_info[1])
+                    except:
+                        cherrypy.log("EMAIL FAIL 2 " + contents)
+                        raise
+                    else:
+                        try:
+                            from email.mime.text import MIMEText
+                            msg = MIMEText(contents)
+                            msg['To'] = to
+                            msg['From'] = fromm
+                            msg['Subject'] = subject
+                            smtp.send_message(msg)
+                        except:
+                            cherrypy.log("EMAIL FAIL 3 " + contents)
+                            raise
 
         elif test_or_production == 'production':
             # connect to webfaction smtp server
-            from smtplib import SMTP
-
             try:
                 smtp = SMTP('smtp.webfaction.com', timeout=10)  # 10 seconds
             except:
@@ -324,7 +348,7 @@ class PangaKupu():
                 with smtp:
                     try:
                         # get username and password for the webfaction mailbox
-                        mail_access_info = self.get_mail_access_info()
+                        mail_access_info = self.get_mail_access_info(test_or_production)
                         smtp.login(mail_access_info[0], mail_access_info[1])
                     except:
                         cherrypy.log("EMAIL FAIL 2 " + contents)
@@ -367,9 +391,16 @@ class PangaKupu():
             template = self.env.get_template(template_id + '.html')
             return template.render({"template_id": template_id})
 
-    def get_mail_access_info(self):
+    def get_mail_access_info(self, test_or_production):
         crac = cherrypy.request.app.config
-        mailbox_user = crac['webfaction_mailbox']['user']
-        mailbox_password = keyring.get_password(crac['webfaction_mailbox']
+
+        if test_or_production == "test":
+            mailbox_user = crac['gmail_mailbox']['user']
+            mailbox_password = keyring.get_password(crac['gmail_mailbox']
+                                                    ['id'], mailbox_user)
+
+        if test_or_production == "production":
+            mailbox_user = crac['webfaction_mailbox']['user']
+            mailbox_password = keyring.get_password(crac['webfaction_mailbox']
                                                     ['id'], mailbox_user)
         return mailbox_user, mailbox_password
