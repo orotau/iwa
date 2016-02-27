@@ -11,7 +11,7 @@ import config
 class Dummy():
     @cherrypy.expose
     def index(self):
-          raise cherrypy.HTTPRedirect('/iwa')
+        raise cherrypy.HTTPRedirect('/iwa')
 
 
 class PangaKupu():

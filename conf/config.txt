@@ -1,9 +1,9 @@
-[graham-laptop]
+[graham-Aspire-E1-522]
 iwa_path = /home/graham/PythonProjects/webfaction_home/webapps/pk_cp/iwa/
 test_or_production = test
 id = test_database_password
 user = kereama
-database = pango
+database = whero
 socket_host = 0.0.0.0
 socket_port = 8090
 autoreload = True
