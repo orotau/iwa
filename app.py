@@ -300,6 +300,16 @@ class PangaKupu():
                                 "koru8": koru[8],
                                 "digraph_starts": digraph_starts})
 
+# ####################################################################
+# PAGE - frequency (auau)
+# ####################################################################
+    @cherrypy.expose
+    def auau(self, page = 1):
+        return self.example(int(page), jumping)
+
+
+
+
     def send_mail(self, fromm, to, subject, contents):
         from smtplib import SMTP
 
