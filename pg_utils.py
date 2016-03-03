@@ -4,7 +4,6 @@ with the words
 '''
 import psycopg2
 import keyring
-#import cherrypy
 import json
 import xlrd
 import config

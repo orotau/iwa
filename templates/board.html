@@ -8,8 +8,28 @@
 {% endblock head %}
 
 {% block main_content %}
-<h1 class="text-center"><a style="color:black;" href="./about">Koru</a> : {{koru}}</h1>
-<h1 class="text-center">Rorohiko : {{children_count}} kupu</h1>
+<div class="row">
+	<div class="col-sm-4">
+		<p class="text-center" id="group_text">PAI</p>
+		<div class ="text-center">
+			<p id="group_score">{{pai_count}}</p>
+		</div>
+	</div>
+	<div class="col-sm-4">
+		<p class="text-center" id="group_text">TINO PAI</p>
+		<div class ="text-center">
+			<p id="group_score">{{tino_pai_count}}</p>
+		</div>
+	</div>
+	<div class="col-sm-4">
+		<p class="text-center" id="group_text">TINO PAI RAWA ATU</p>
+		<div class ="text-center">
+			<p id="group_score">{{tino_pai_rawa_atu_count}}</p>
+		</div>
+	</div>
+</div>
+
+
 
 {% include "board_core.html" %}
 
