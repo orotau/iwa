@@ -9,7 +9,12 @@
 <style>
 /*for the words*/
 p.kupu{
-	font-size: 200%	
+	font-size: 200%;	
+}
+
+p.kupu_link{
+	font-size: 200%;
+	text-decoration: underline;	
 }
 </style>
 {% endblock head %}
@@ -43,37 +48,62 @@ p.kupu{
 </div>
 
 <div class='row'>
+{% set href_main = "http://maoridictionary.co.nz/search?&keywords=" %}
 {% if grouped_children|length == 1 %}
 	<div class="col-sm-12">
 		{% for child in grouped_children[0] %}
-			<p class="text-center kupu">{{child}}</p>
+			{% if child in pai_words %}
+  				<p class="text-center kupu_link"><a href="{{ href_main + child }}">{{ child }}</a></p>			   
+			{% else %}
+				<p class="text-center kupu">{{child}}</p>			
+			{% endif %}
 		{% endfor %}
 	</div>
 {% elif grouped_children|length == 2 %}
 	<div class="col-sm-6">
 	{% for child in grouped_children[0] %}
-		<p class="text-center kupu">{{child}}</p>
+		{% if child in pai_words %}
+  				<p class="text-center kupu_link"><a href="{{ href_main + child }}">{{ child }}</a></p>			   
+		{% else %}
+			<p class="text-center kupu">{{child}}</p>			
+		{% endif %}
 	{% endfor %}
 	</div>
 	<div class="col-sm-6">
 	{% for child in grouped_children[1] %}
-		<p class="text-center kupu">{{child}}</p>
+		{% if child in pai_words %}
+  				<p class="text-center kupu_link"><a href="{{ href_main + child }}">{{ child }}</a></p>			   
+		{% else %}
+			<p class="text-center kupu">{{child}}</p>			
+		{% endif %}
 	{% endfor %}
 	</div>
 {% elif grouped_children|length == 3 %}
 	<div class="col-sm-4">
 	{% for child in grouped_children[0] %}
-		<p class="text-center kupu">{{child}}</p>
+		{% if child in pai_words %}
+  				<p class="text-center kupu_link"><a href="{{ href_main + child }}">{{ child }}</a></p>			   
+		{% else %}
+			<p class="text-center kupu">{{child}}</p>			
+		{% endif %}
 	{% endfor %}
 	</div>
 	<div class="col-sm-4">
 	{% for child in grouped_children[1] %}
-		<p class="text-center kupu">{{child}}</p>
+		{% if child in pai_words %}
+  				<p class="text-center kupu_link"><a href="{{ href_main + child }}">{{ child }}</a></p>			   
+		{% else %}
+			<p class="text-center kupu">{{child}}</p>			
+		{% endif %}
 	{% endfor %}
 	</div>
 	<div class="col-sm-4">
 	{% for child in grouped_children[2] %}
-		<p class="text-center kupu">{{child}}</p>
+		{% if child in pai_words %}
+  				<p class="text-center kupu_link"><a href="{{ href_main + child }}">{{ child }}</a></p>			   
+		{% else %}
+			<p class="text-center kupu">{{child}}</p>			
+		{% endif %}
 	{% endfor %}
 	</div>
 {% endif %}

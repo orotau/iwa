@@ -138,9 +138,6 @@ def group_children(children):
             tino_pai_rawa_atu.append((word, frequency))
         else:
             raise
-    print(pai)
-    print(tino_pai)
-    print(tino_pai_rawa_atu)
     return pai, tino_pai, tino_pai_rawa_atu    
 
 if __name__ == '__main__':

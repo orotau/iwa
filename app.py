@@ -239,6 +239,7 @@ class PangaKupu():
                                 "tino_pai_count": tino_pai_count,
                                 "tino_pai_rawa_atu_count": tino_pai_rawa_atu_count,
                                 "grouped_children": grouped_children,
+                                "pai_words": [x[0] for x in groups[0]],
                                 "koru": koru,
                                 "koru0": koru[0],
                                 "koru1": koru[1],
