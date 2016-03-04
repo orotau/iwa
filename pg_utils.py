@@ -4,11 +4,14 @@ with the words
 '''
 import psycopg2
 import keyring
-import cherrypy
 import json
 import xlrd
 import config
+import post_process_text_file
+import difficulty_level
+from collections import namedtuple
 
+Text_Chunk = namedtuple('Text_Chunk', 'text_chunk start end type')
 
 def get_db_access_info():
     cf = config.ConfigFile()
@@ -39,29 +42,33 @@ def populate_pgt_word():
                 for w in unique_word_forms:
                     cursor.execute("INSERT INTO pgt_word VALUES (%s)", (w,))
 
+def populate_word_frequency():
 
-def populate_pgt_board_children():
+    TAUIRA_FILE_ID = "hpk_tauira"
 
-    # get the data for the 3 columns
-    cf = config.ConfigFile()
-    iwa_path = (cf.configfile[cf.computername]['iwa_path'])
-    xl_filename = "children-counts.xlsx"
-    full_xl_path = iwa_path + xl_filename
-    wb = xlrd.open_workbook(full_xl_path)
-    sheet = wb.sheet_by_index(0)  # first sheet
-
-    words = sheet.col_values(0, 1)  # column 1, row 2
-    centre_letters = sheet.col_values(1, 1)   # column 2, row 2
-    children_counts = sheet.col_values(2, 1)  # column 3, row 2
-
+    # get the data
+    words_and_frequency = post_process_text_file.get_words_and_counts(TAUIRA_FILE_ID)
     db_access_info = get_db_access_info()
     with psycopg2.connect(database=db_access_info[0],
                           user=db_access_info[1],
                           password=db_access_info[2]) as connection:
 
         with connection.cursor() as cursor:
-            for x, y, z in zip(words, centre_letters, children_counts):
-                cursor.execute("INSERT INTO pgt_board_children VALUES (%s, %s, %s)", (x, y, z))
+            for x, y in words_and_frequency:
+                cursor.execute("INSERT INTO pgt_word_frequency VALUES (%s, %s)", (x, y))
+
+def populate_pgt_board():
+
+    # get the data
+    boards = difficulty_level.distribute_children()
+    db_access_info = get_db_access_info()
+    with psycopg2.connect(database=db_access_info[0],
+                          user=db_access_info[1],
+                          password=db_access_info[2]) as connection:
+
+        with connection.cursor() as cursor:
+            for x, y in boards:
+                cursor.execute("INSERT INTO pgt_board VALUES (%s, %s)", (x, y))
 
 
 if __name__ == '__main__':
@@ -78,9 +85,13 @@ if __name__ == '__main__':
     populate_pgt_word_parser = subparsers.add_parser('populate_pgt_word')
     populate_pgt_word_parser.set_defaults(function=populate_pgt_word)
 
-    # create the parser for the populate_pgt_board_children function
-    populate_pgt_board_children_parser = subparsers.add_parser('populate_pgt_board_children')
-    populate_pgt_board_children_parser.set_defaults(function=populate_pgt_board_children)
+    # create the parser for the populate_word_frequency function
+    populate_word_frequency_parser = subparsers.add_parser('populate_word_frequency')
+    populate_word_frequency_parser.set_defaults(function=populate_word_frequency)
+
+    # create the parser for the populate_pgt_board function
+    populate_pgt_board_parser = subparsers.add_parser('populate_pgt_board')
+    populate_pgt_board_parser.set_defaults(function=populate_pgt_board)
 
     # parse the arguments
     arguments = parser.parse_args()

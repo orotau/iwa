@@ -4,6 +4,7 @@ import keyring
 import pangakupu as pk
 import pū
 import maoriword as mw
+import difficulty_level
 import pg_utils
 import config
 
@@ -11,7 +12,7 @@ import config
 class Dummy():
     @cherrypy.expose
     def index(self):
-          raise cherrypy.HTTPRedirect('/iwa')
+        raise cherrypy.HTTPRedirect('/iwa')
 
 
 class PangaKupu():
@@ -34,88 +35,25 @@ class PangaKupu():
 
             with connection.cursor() as cursor:
 
-                one_9_letter_word_at_random_query = \
+                word_centre_letter_at_random_query = \
                     ' '.join((
-                        "SELECT word FROM pgt_board_children",
-                        "ORDER BY RANDOM() LIMIT 1",
+                        "SELECT * FROM pgt_board",
+                        "ORDER BY RANDOM() LIMIT 2",
                     ))
 
-                cursor.execute(one_9_letter_word_at_random_query)
-                word = cursor.fetchall()  # list of tuples [('word'),]
+                cursor.execute(word_centre_letter_at_random_query)
+                word_centre_letter = cursor.fetchall()  # list of 1 tuple 
 
         connection.close()
-        word = ''.join(word[0])
-        koru = pk.get_koru(word)
+        word_for_board = ''.join(word_centre_letter[0][0])
+        centre_letter_for_board = ''.join(word_centre_letter[0][1])
+        koru = pk.get_koru(word_for_board, centre_letter_for_board)
+        word_for_display = ''.join(word_centre_letter[1][0])
         template_id = 'index'
         template = self.env.get_template(template_id + '.html')
         return template.render({"template_id": template_id,
-                                "word": word,
+                                "word": word_for_display,
                                 "koru": koru})
-
-
-# ####################################################################
-# PAGE - createboard
-# ####################################################################
-    @cherrypy.expose
-    def createboard(self):
-
-        MAX_CHILDREN = 265
-        min_and_max_pairs = [(1, MAX_CHILDREN),
-                             (1, 20),
-                             (21, 50),
-                             (51, 100),
-                             (101, MAX_CHILDREN)]
-
-        db_access_info = pg_utils.get_db_access_info()
-        with psycopg2.connect(database=db_access_info[0],
-                              user=db_access_info[1],
-                              password=db_access_info[2]) as connection:
-
-            with connection.cursor() as cursor:
-
-                word_centre_letter_pairs = []
-                for min, max in min_and_max_pairs:
-
-                    one_random_row_board_children_query = \
-                        ' '.join((
-                            "SELECT * FROM pgt_board_children",
-                            "WHERE number_of_children BETWEEN",
-                            "{0} AND {1}".format(min, max),
-                            "ORDER BY RANDOM() LIMIT 1",
-                        ))
-
-                    cursor.execute(one_random_row_board_children_query)
-                    board_children_row = cursor.fetchall()  # list of 1 tuple
-                    word = ''.join(board_children_row[0][0])
-                    centre_letter = ''.join(board_children_row[0][1])
-                    word_centre_letter_pairs.append((word, centre_letter))
-
-        connection.close()
-
-        # get the koru
-        koru001 = pk.get_koru(word_centre_letter_pairs[0][0],
-                              word_centre_letter_pairs[0][1])
-
-        koru001020 = pk.get_koru(word_centre_letter_pairs[1][0],
-                                 word_centre_letter_pairs[1][1])
-
-        koru021050 = pk.get_koru(word_centre_letter_pairs[2][0],
-                                 word_centre_letter_pairs[2][1])
-
-        koru051100 = pk.get_koru(word_centre_letter_pairs[3][0],
-                                 word_centre_letter_pairs[3][1])
-
-        koru101 = pk.get_koru(word_centre_letter_pairs[4][0],
-                              word_centre_letter_pairs[4][1])
-
-        template_id = 'createboard'
-        template = self.env.get_template(template_id + '.html')
-        return template.render({"template_id": template_id,
-                                "koru001": koru001,
-                                "koru001020": koru001020,
-                                "koru021050": koru021050,
-                                "koru051100": koru051100,
-                                "koru101": koru101})
 
 
 # ####################################################################
@@ -185,7 +123,10 @@ class PangaKupu():
     def board(self, koru):
 
         children = pk.get_children(koru, koru[8])
-        children_count = len(children)
+        groups = difficulty_level.group_children(children)        
+        pai_count = len(groups[0])
+        tino_pai_count = len(groups[0]) + len(groups[1])
+        tino_pai_rawa_atu_count = len(groups[0]) + len(groups[1]) + len(groups[2])
 
         # allow template to hide border between digraphs
         digraph_starts = []
@@ -204,7 +145,9 @@ class PangaKupu():
         template_id = 'board'
         template = self.env.get_template(template_id + '.html')
         return template.render({"template_id": template_id,
-                                "children_count": children_count,
+                                "pai_count": pai_count,
+                                "tino_pai_count": tino_pai_count,
+                                "tino_pai_rawa_atu_count": tino_pai_rawa_atu_count,
                                 "koru": koru,
                                 "koru0": koru[0],
                                 "koru1": koru[1],
@@ -225,7 +168,13 @@ class PangaKupu():
     def boardchildren(self, koru):
 
         children = pk.get_children(koru, koru[8])
-        children_count = len(children)
+        groups = difficulty_level.group_children(children)        
+        pai_count = len(groups[0])
+        tino_pai_count = len(groups[0]) + len(groups[1])
+        tino_pai_rawa_atu_count = len(groups[0]) + len(groups[1]) + len(groups[2])
+
+        #for use with existing code
+        children_count = tino_pai_rawa_atu_count
 
         # Sort
         children = sorted(children, key=mw.get_list_sort_key)
@@ -286,8 +235,11 @@ class PangaKupu():
         template_id = 'boardchildren'
         template = self.env.get_template(template_id + '.html')
         return template.render({"template_id": template_id,
+                                "pai_count": pai_count,
+                                "tino_pai_count": tino_pai_count,
+                                "tino_pai_rawa_atu_count": tino_pai_rawa_atu_count,
                                 "grouped_children": grouped_children,
-                                "children_count": children_count,
+                                "pai_words": [x[0] for x in groups[0]],
                                 "koru": koru,
                                 "koru0": koru[0],
                                 "koru1": koru[1],
@@ -300,21 +252,55 @@ class PangaKupu():
                                 "koru8": koru[8],
                                 "digraph_starts": digraph_starts})
 
+# ####################################################################
+# PAGE - frequency (auau)
+# ####################################################################
+    @cherrypy.expose
+    def auau(self, page = 1):
+        return self.example(int(page), jumping)
+
+
+
+
     def send_mail(self, fromm, to, subject, contents):
+        from smtplib import SMTP
 
         cf = config.ConfigFile()
         test_or_production = (cf.configfile[cf.computername]['test_or_production'])
 
         if test_or_production == 'test':
             # connect to smtp server for greenbay.graham@gmail.com
-            import yagmail
-            yag = yagmail.SMTP('greenbay.graham')
-            yag.send(to=to, subject=subject, contents=yagmail.raw(contents))
+            # http://goo.gl/5AMQVI
+            try:
+                smtp = SMTP("smtp.gmail.com", 587)
+                smtp.ehlo()
+                smtp.starttls()
+            except:
+                cherrypy.log("EMAIL FAIL 1 " + contents)
+                raise
+            else:
+                with smtp:
+                    try:
+                        # get username and password for the webfaction mailbox
+                        mail_access_info = self.get_mail_access_info(test_or_production)
+                        smtp.login(mail_access_info[0], mail_access_info[1])
+                    except:
+                        cherrypy.log("EMAIL FAIL 2 " + contents)
+                        raise
+                    else:
+                        try:
+                            from email.mime.text import MIMEText
+                            msg = MIMEText(contents)
+                            msg['To'] = to
+                            msg['From'] = fromm
+                            msg['Subject'] = subject
+                            smtp.send_message(msg)
+                        except:
+                            cherrypy.log("EMAIL FAIL 3 " + contents)
+                            raise
 
         elif test_or_production == 'production':
             # connect to webfaction smtp server
-            from smtplib import SMTP
-
             try:
                 smtp = SMTP('smtp.webfaction.com', timeout=10)  # 10 seconds
             except:
@@ -324,7 +310,7 @@ class PangaKupu():
                 with smtp:
                     try:
                         # get username and password for the webfaction mailbox
-                        mail_access_info = self.get_mail_access_info()
+                        mail_access_info = self.get_mail_access_info(test_or_production)
                         smtp.login(mail_access_info[0], mail_access_info[1])
                     except:
                         cherrypy.log("EMAIL FAIL 2 " + contents)
@@ -367,9 +353,16 @@ class PangaKupu():
             template = self.env.get_template(template_id + '.html')
             return template.render({"template_id": template_id})
 
-    def get_mail_access_info(self):
+    def get_mail_access_info(self, test_or_production):
         crac = cherrypy.request.app.config
-        mailbox_user = crac['webfaction_mailbox']['user']
-        mailbox_password = keyring.get_password(crac['webfaction_mailbox']
+
+        if test_or_production == "test":
+            mailbox_user = crac['gmail_mailbox']['user']
+            mailbox_password = keyring.get_password(crac['gmail_mailbox']
+                                                    ['id'], mailbox_user)
+
+        if test_or_production == "production":
+            mailbox_user = crac['webfaction_mailbox']['user']
+            mailbox_password = keyring.get_password(crac['webfaction_mailbox']
                                                     ['id'], mailbox_user)
         return mailbox_user, mailbox_password

@@ -88,26 +88,6 @@ def get_children(input_string, compulsory_letter, minimum_length=3):
     return(children)
 
 
-def get_all_children_counts():
-    # get the word list
-    cf = config.ConfigFile()
-    json_path = (cf.configfile[cf.computername]['iwa_path'])
-    json_filename = "all_words_for_iwa.json"
-    full_json_path = json_path + json_filename
-    with open(full_json_path, 'r') as f:
-        unique_word_forms = json.load(f)
-
-    nines = [x for x in unique_word_forms if x not in nines_to_exclude]
-    nines = [x for x in nines if len(x) == 9]
-
-    all_children = {}
-    for word in nines:
-        word_as_list = mw._aslist(word)
-        for letter in set(word_as_list):
-            if len(letter) == 1:
-                children = get_children(word, letter)
-                all_children[(word, letter)] = len(children)
-
 
 def get_koru(seed_word, centre_letter=None):
 
