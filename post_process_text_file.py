@@ -48,7 +48,7 @@ def get_words_and_counts(file_id):
     PICKLE_EXTENSION = "p"
 
     cf = config.ConfigFile()
-    pickle_files_path = (cf.configfile[cf.computername]['pickle_files_path'])
+    pickle_files_path = (cf.configfile[cf.computername]['iwa_path'])
     pickle_file_path = pickle_files_path + file_id + os.extsep + PICKLE_EXTENSION
 
     with open(pickle_file_path, 'rb') as pickle_file:
