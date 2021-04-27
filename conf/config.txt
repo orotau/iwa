@@ -1,9 +1,7 @@
-[graham-Aspire-E1-522]
-iwa_path = /home/graham/PythonProjects/webfaction_home/webapps/pk_cp/iwa/
+[graham-desktop-ubuntu]
+iwa_path = /home/graham/PythonProjects/iwa/iwa/
 test_or_production = test
-id = test_database_password
-user = kereama
-database = whero
+sqlite3_db_path = /home/graham/PythonProjects/iwa/iwa.db
 socket_host = 0.0.0.0
 socket_port = 8090
 autoreload = True

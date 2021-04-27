@@ -41,6 +41,8 @@ if __name__ == '__main__':
     cf = config.ConfigFile()
 
     cherrypy.config.update({
+        # 'log.error_file': cf.configfile[cf.computername]['log_path'],
+        # 'log.access_file': cf.configfile[cf.computername]['access_path'],
         'server.socket_host': cf.configfile[cf.computername]['socket_host'],
         'server.socket_port': int(cf.configfile[cf.computername]['socket_port']),
         'engine.autoreload.on': cf.configfile[cf.computername].getboolean('autoreload')

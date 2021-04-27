@@ -12,7 +12,7 @@ class ConfigFile():
     # Otherwise you will just get the last entry for the computer!
 
     config_paths = {
-        'graham-Aspire-E1-522': '/home/graham/PythonProjects/webfaction_home/webapps/pk_cp/conf/config.txt',
+        'graham-desktop-ubuntu': '/home/graham/PythonProjects/iwa/conf/config.txt',
         'web238.webfaction.com': '/home/orotau/webapps/pk_cp/conf/config.txt'
         }
 

@@ -1,11 +1,11 @@
 import cherrypy
-import psycopg2
-import keyring
+# import psycopg2
+# import keyring
 import pangakupu as pk
 import pū
 import maoriword as mw
 import difficulty_level
-import pg_utils
+import sqlite3_utils
 import config
 
 
@@ -28,23 +28,19 @@ class PangaKupu():
 # ####################################################################
     @cherrypy.expose
     def index(self):
-        db_access_info = pg_utils.get_db_access_info()
-        with psycopg2.connect(database=db_access_info[0],
-                              user=db_access_info[1],
-                              password=db_access_info[2]) as connection:
+        sqlite3_connection = sqlite3_utils.get_sqlite3_connection()
+        cur = sqlite3_connection.cursor()
 
-            with connection.cursor() as cursor:
+        word_centre_letter_at_random_query = \
+            ' '.join((
+                "SELECT * FROM board",
+                "ORDER BY RANDOM() LIMIT 2",
+            ))
 
-                word_centre_letter_at_random_query = \
-                    ' '.join((
-                        "SELECT * FROM pgt_board",
-                        "ORDER BY RANDOM() LIMIT 2",
-                    ))
+        cur.execute(word_centre_letter_at_random_query)
+        word_centre_letter = cur.fetchall()  # list of 1 tuple 
 
-                cursor.execute(word_centre_letter_at_random_query)
-                word_centre_letter = cursor.fetchall()  # list of 1 tuple 
-
-        connection.close()
+        sqlite3_connection.close()
         word_for_board = ''.join(word_centre_letter[0][0])
         centre_letter_for_board = ''.join(word_centre_letter[0][1])
         koru = pk.get_koru(word_for_board, centre_letter_for_board)

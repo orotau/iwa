@@ -12,13 +12,13 @@ for a board where a board is defined by '9 letter word" + "compulary letter"
 # put in the grid
 
 import config
-import psycopg2
+# import psycopg2
 import maoriword as mw
 import pprint
 import json
 import pangakupu as pk
 import boards_and_children
-import pg_utils
+import sqlite3_utils
 
 # These numbers are educated guesses at a first go
 # of something that seems ok
@@ -38,22 +38,15 @@ def distribute_children():
     '''
 
     # get the word frequency data
-    db_access_info = pg_utils.get_db_access_info()
-    with psycopg2.connect(database=db_access_info[0],
-                          user=db_access_info[1],
-                          password=db_access_info[2]) as connection:
+    sqlite3_connection = sqlite3_utils.get_sqlite3_connection()
+    cur = sqlite3_connection.cursor()
+    
+    word_frequency_pairs = []
 
-        with connection.cursor() as cursor:
-            word_frequency_pairs = []
-
-            all_word_frequency_data_query = \
-                ' '.join((
-                    "SELECT * FROM pgt_word_frequency",
-                ))
-
-            cursor.execute(all_word_frequency_data_query)
-            word_frequency_pairs = cursor.fetchall()  # list of tuples
-            words = [x[0] for x in word_frequency_pairs]
+    cur.execute("SELECT * FROM waf")
+    word_frequency_pairs = cur.fetchall()  # list of tuples
+    sqlite3_connection.close()
+    words = [x[0] for x in word_frequency_pairs]
 
     boards = []
     for k, v in boards_and_children.boards_and_children.items():
@@ -84,8 +77,7 @@ def distribute_children():
         if not(counts[0] < MINIMUM_GROUP_SIZE or 
                counts[1] < MINIMUM_GROUP_SIZE or 
                counts[2] < MINIMUM_GROUP_SIZE):
-            boards.append(k)
-
+            boards.append(k) 
     return boards
 
 def group_children(children):
@@ -97,33 +89,29 @@ def group_children(children):
     - tino pai rawa atu
     '''
     # get the word frequency data
-    db_access_info = pg_utils.get_db_access_info()
-    with psycopg2.connect(database=db_access_info[0],
-                          user=db_access_info[1],
-                          password=db_access_info[2]) as connection:
+    sqlite3_connection = sqlite3_utils.get_sqlite3_connection()
+    cur = sqlite3_connection.cursor()
 
-        with connection.cursor() as cursor:
-            word_frequency_pairs = []
-            for child in children:
-                frequency_data_query = \
-                    ' '.join((
-                        "SELECT kount FROM pgt_word_frequency",
-                        "WHERE word = (%s)",                 
-                    ))
+    word_frequency_pairs = []
+    for child in children:
 
-                cursor.execute(frequency_data_query, (child,))
-                frequency = cursor.fetchall()  # list of 1 tuple (assumed)
-                if frequency == []:
-                    # child word not found in word frequency list
-                    frequency_to_use = 0
-                else:
-                    frequency_to_use = int(frequency[0][0])
-                word_frequency_pairs.append((child, frequency_to_use))
+        cur.execute("SELECT frequency FROM waf WHERE word=?", (child,))
 
+        frequency = cur.fetchall()  # list of 1 tuple (assumed)
+
+        if frequency == []:
+            # child word not found in word frequency list
+            frequency_to_use = 0
+        else:
+            frequency_to_use = int(frequency[0][0])
+        word_frequency_pairs.append((child, frequency_to_use))
+
+    sqlite3_connection.close()
+    
     intervals = [frozenset(range(PAI_MINIMUM_FREQUENCY, VERY_LARGE_NUMBER)), \
-                 frozenset(range(TINO_PAI_MINIMUM_FREQUENCY, PAI_MINIMUM_FREQUENCY)), \
-                 frozenset(range(TINO_PAI_RAWA_ATU_MINIMUM_FREQUENCY, \
-                                 TINO_PAI_MINIMUM_FREQUENCY))]
+         frozenset(range(TINO_PAI_MINIMUM_FREQUENCY, PAI_MINIMUM_FREQUENCY)), \
+         frozenset(range(TINO_PAI_RAWA_ATU_MINIMUM_FREQUENCY, \
+                         TINO_PAI_MINIMUM_FREQUENCY))]
 
     pai = []
     tino_pai = []

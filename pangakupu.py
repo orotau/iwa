@@ -4,12 +4,12 @@ The functions to get the data ready for the web site
 
 import random
 import json
-import psycopg2
+# import psycopg2
 from collections import Counter
 import maoriword as mw
 import pū
 import config
-import pg_utils
+import sqlite3_utils
 
 
 # excluding those 9 letter words with
@@ -59,18 +59,13 @@ def get_children(input_string, compulsory_letter, minimum_length=3):
     input_string_as_list = mw._aslist(input_string)
 
     # get the word list
-    db_access_info = pg_utils.get_db_access_info()
-    with psycopg2.connect(database=db_access_info[0],
-                          user=db_access_info[1],
-                          password=db_access_info[2]) as connection:
+    sqlite3_connection = sqlite3_utils.get_sqlite3_connection()
+    cur = sqlite3_connection.cursor()
 
-        with connection.cursor() as cursor:
-
-            all_word_forms_query = "SELECT * FROM pgt_word"
-            cursor.execute(all_word_forms_query)
-            unique_word_forms = cursor.fetchall()  # list of tuples
-
-    connection.close()
+    all_word_forms_query = "SELECT * FROM word"
+    cur.execute(all_word_forms_query)
+    unique_word_forms = cur.fetchall()  # list of tuples
+    sqlite3_connection.close()
 
     # list of strings
     unique_word_forms = [''.join(x) for x in unique_word_forms]

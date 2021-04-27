@@ -1,0 +1,1062 @@
+[27/Apr/2021:14:39:14] ENGINE Listening for SIGTERM.
+[27/Apr/2021:14:39:14] ENGINE Listening for SIGHUP.
+[27/Apr/2021:14:39:14] ENGINE Listening for SIGUSR1.
+[27/Apr/2021:14:39:14] ENGINE Bus STARTING
+[27/Apr/2021:14:39:14] ENGINE Started monitor thread 'Autoreloader'.
+[27/Apr/2021:14:39:14] ENGINE Serving on http://0.0.0.0:8090
+[27/Apr/2021:14:39:14] ENGINE Bus STARTED
+[27/Apr/2021:14:39:31] HTTP 
+Traceback (most recent call last):
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/lib/encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/graham/PythonProjects/iwa/app.py", line 31, in index
+    db_access_info = pg_utils.get_db_access_info()
+  File "/home/graham/PythonProjects/iwa/pg_utils.py", line 20, in get_db_access_info
+    db_password = keyring.get_password(cf.configfile[cf.computername]
+NameError: name 'keyring' is not defined
+[27/Apr/2021:14:39:31] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 0.0.0.0:8090
+  USER-AGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:87.0) Gecko/20100101 Firefox/87.0
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  ACCEPT-LANGUAGE: mi,en-US;q=0.7,en;q=0.3
+  ACCEPT-ENCODING: gzip, deflate
+  DNT: 1
+  CONNECTION: keep-alive
+  UPGRADE-INSECURE-REQUESTS: 1
+  SEC-GPC: 1
+[27/Apr/2021:14:39:33]  EMAIL FAIL 2 500 Internal Server ErrorThe server encountered an unexpected condition which prevented it from fulfilling the request.Traceback (most recent call last):
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/lib/encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/graham/PythonProjects/iwa/app.py", line 31, in index
+    db_access_info = pg_utils.get_db_access_info()
+  File "/home/graham/PythonProjects/iwa/pg_utils.py", line 20, in get_db_access_info
+    db_password = keyring.get_password(cf.configfile[cf.computername]
+NameError: name 'keyring' is not defined
+18.6.0
+[27/Apr/2021:14:39:34]  EMAIL FAIL 4 orotau@webfaction.com
+[27/Apr/2021:14:39:34]  EMAIL FAIL 4 pangakupu@gmail.com
+[27/Apr/2021:14:39:34]  EMAIL FAIL 4 TEST ENVIRONMENT - Pangakupu - 500 Internal Server Error
+[27/Apr/2021:14:39:34]  EMAIL FAIL 4 500 Internal Server ErrorThe server encountered an unexpected condition which prevented it from fulfilling the request.Traceback (most recent call last):
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/lib/encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/graham/PythonProjects/iwa/app.py", line 31, in index
+    db_access_info = pg_utils.get_db_access_info()
+  File "/home/graham/PythonProjects/iwa/pg_utils.py", line 20, in get_db_access_info
+    db_password = keyring.get_password(cf.configfile[cf.computername]
+NameError: name 'keyring' is not defined
+18.6.0
+[27/Apr/2021:14:41:08] HTTP 
+Traceback (most recent call last):
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/lib/encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/graham/PythonProjects/iwa/app.py", line 31, in index
+    db_access_info = pg_utils.get_db_access_info()
+  File "/home/graham/PythonProjects/iwa/pg_utils.py", line 20, in get_db_access_info
+    db_password = keyring.get_password(cf.configfile[cf.computername]
+NameError: name 'keyring' is not defined
+[27/Apr/2021:14:41:08] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 0.0.0.0:8090
+  USER-AGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:87.0) Gecko/20100101 Firefox/87.0
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  ACCEPT-LANGUAGE: mi,en-US;q=0.7,en;q=0.3
+  ACCEPT-ENCODING: gzip, deflate
+  DNT: 1
+  CONNECTION: keep-alive
+  REFERER: http://0.0.0.0:8090/iwa/contact
+  UPGRADE-INSECURE-REQUESTS: 1
+  SEC-GPC: 1
+[27/Apr/2021:14:41:09]  EMAIL FAIL 2 500 Internal Server ErrorThe server encountered an unexpected condition which prevented it from fulfilling the request.Traceback (most recent call last):
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/lib/encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/graham/PythonProjects/iwa/app.py", line 31, in index
+    db_access_info = pg_utils.get_db_access_info()
+  File "/home/graham/PythonProjects/iwa/pg_utils.py", line 20, in get_db_access_info
+    db_password = keyring.get_password(cf.configfile[cf.computername]
+NameError: name 'keyring' is not defined
+18.6.0
+[27/Apr/2021:14:41:09]  EMAIL FAIL 4 orotau@webfaction.com
+[27/Apr/2021:14:41:09]  EMAIL FAIL 4 pangakupu@gmail.com
+[27/Apr/2021:14:41:09]  EMAIL FAIL 4 TEST ENVIRONMENT - Pangakupu - 500 Internal Server Error
+[27/Apr/2021:14:41:09]  EMAIL FAIL 4 500 Internal Server ErrorThe server encountered an unexpected condition which prevented it from fulfilling the request.Traceback (most recent call last):
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/lib/encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/graham/PythonProjects/iwa/app.py", line 31, in index
+    db_access_info = pg_utils.get_db_access_info()
+  File "/home/graham/PythonProjects/iwa/pg_utils.py", line 20, in get_db_access_info
+    db_password = keyring.get_password(cf.configfile[cf.computername]
+NameError: name 'keyring' is not defined
+18.6.0
+[27/Apr/2021:14:42:02]  EMAIL FAIL 2 d
+[27/Apr/2021:14:42:03] HTTP 
+Traceback (most recent call last):
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/lib/encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/graham/PythonProjects/iwa/app.py", line 112, in thankyou
+    self.send_mail(fromm, to, subject, contents)
+  File "/home/graham/PythonProjects/iwa/app.py", line 285, in send_mail
+    mail_access_info = self.get_mail_access_info(test_or_production)
+  File "/home/graham/PythonProjects/iwa/app.py", line 361, in get_mail_access_info
+    mailbox_password = keyring.get_password(crac['gmail_mailbox']
+NameError: name 'keyring' is not defined
+[27/Apr/2021:14:42:03] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 0.0.0.0:8090
+  USER-AGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:87.0) Gecko/20100101 Firefox/87.0
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  ACCEPT-LANGUAGE: mi,en-US;q=0.7,en;q=0.3
+  ACCEPT-ENCODING: gzip, deflate
+  ORIGIN: http://0.0.0.0:8090
+  DNT: 1
+  CONNECTION: keep-alive
+  REFERER: http://0.0.0.0:8090/iwa/contact
+  UPGRADE-INSECURE-REQUESTS: 1
+  SEC-GPC: 1
+  Content-Type: application/x-www-form-urlencoded
+  Content-Length: 10
+[27/Apr/2021:14:42:04]  EMAIL FAIL 2 500 Internal Server ErrorThe server encountered an unexpected condition which prevented it from fulfilling the request.Traceback (most recent call last):
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/lib/encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/graham/PythonProjects/iwa/app.py", line 112, in thankyou
+    self.send_mail(fromm, to, subject, contents)
+  File "/home/graham/PythonProjects/iwa/app.py", line 285, in send_mail
+    mail_access_info = self.get_mail_access_info(test_or_production)
+  File "/home/graham/PythonProjects/iwa/app.py", line 361, in get_mail_access_info
+    mailbox_password = keyring.get_password(crac['gmail_mailbox']
+NameError: name 'keyring' is not defined
+18.6.0
+[27/Apr/2021:14:42:04]  EMAIL FAIL 4 orotau@webfaction.com
+[27/Apr/2021:14:42:04]  EMAIL FAIL 4 pangakupu@gmail.com
+[27/Apr/2021:14:42:04]  EMAIL FAIL 4 TEST ENVIRONMENT - Pangakupu - 500 Internal Server Error
+[27/Apr/2021:14:42:04]  EMAIL FAIL 4 500 Internal Server ErrorThe server encountered an unexpected condition which prevented it from fulfilling the request.Traceback (most recent call last):
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/lib/encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/graham/PythonProjects/iwa/app.py", line 112, in thankyou
+    self.send_mail(fromm, to, subject, contents)
+  File "/home/graham/PythonProjects/iwa/app.py", line 285, in send_mail
+    mail_access_info = self.get_mail_access_info(test_or_production)
+  File "/home/graham/PythonProjects/iwa/app.py", line 361, in get_mail_access_info
+    mailbox_password = keyring.get_password(crac['gmail_mailbox']
+NameError: name 'keyring' is not defined
+18.6.0
+[27/Apr/2021:15:44:37] ENGINE Keyboard Interrupt: shutting down bus
+[27/Apr/2021:15:44:37] ENGINE Bus STOPPING
+[27/Apr/2021:15:44:37] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 8090)) shut down
+[27/Apr/2021:15:44:37] ENGINE Stopped thread 'Autoreloader'.
+[27/Apr/2021:15:44:37] ENGINE Bus STOPPED
+[27/Apr/2021:15:44:37] ENGINE Bus EXITING
+[27/Apr/2021:15:44:37] ENGINE Bus EXITED
+[27/Apr/2021:15:44:37] ENGINE Waiting for child threads to terminate...
+[27/Apr/2021:15:50:51] ENGINE Listening for SIGTERM.
+[27/Apr/2021:15:50:51] ENGINE Listening for SIGHUP.
+[27/Apr/2021:15:50:51] ENGINE Listening for SIGUSR1.
+[27/Apr/2021:15:50:51] ENGINE Bus STARTING
+[27/Apr/2021:15:50:51] ENGINE Started monitor thread 'Autoreloader'.
+[27/Apr/2021:15:50:51] ENGINE Serving on http://0.0.0.0:8090
+[27/Apr/2021:15:50:51] ENGINE Bus STARTED
+[27/Apr/2021:15:51:03] HTTP 
+Traceback (most recent call last):
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/lib/encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/graham/PythonProjects/iwa/app.py", line 31, in index
+    db_access_info = pg_utils.get_db_access_info()
+  File "/home/graham/PythonProjects/iwa/pg_utils.py", line 20, in get_db_access_info
+    db_password = keyring.get_password(cf.configfile[cf.computername]
+NameError: name 'keyring' is not defined
+[27/Apr/2021:15:51:03] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 0.0.0.0:8090
+  USER-AGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:87.0) Gecko/20100101 Firefox/87.0
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  ACCEPT-LANGUAGE: mi,en-US;q=0.7,en;q=0.3
+  ACCEPT-ENCODING: gzip, deflate
+  DNT: 1
+  CONNECTION: keep-alive
+  REFERER: http://0.0.0.0:8090/iwa/thankyou
+  UPGRADE-INSECURE-REQUESTS: 1
+  SEC-GPC: 1
+[27/Apr/2021:15:51:04]  EMAIL FAIL 2 500 Internal Server ErrorThe server encountered an unexpected condition which prevented it from fulfilling the request.Traceback (most recent call last):
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/lib/encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/graham/PythonProjects/iwa/app.py", line 31, in index
+    db_access_info = pg_utils.get_db_access_info()
+  File "/home/graham/PythonProjects/iwa/pg_utils.py", line 20, in get_db_access_info
+    db_password = keyring.get_password(cf.configfile[cf.computername]
+NameError: name 'keyring' is not defined
+18.6.0
+[27/Apr/2021:15:51:04]  EMAIL FAIL 4 orotau@webfaction.com
+[27/Apr/2021:15:51:04]  EMAIL FAIL 4 pangakupu@gmail.com
+[27/Apr/2021:15:51:04]  EMAIL FAIL 4 TEST ENVIRONMENT - Pangakupu - 500 Internal Server Error
+[27/Apr/2021:15:51:04]  EMAIL FAIL 4 500 Internal Server ErrorThe server encountered an unexpected condition which prevented it from fulfilling the request.Traceback (most recent call last):
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/lib/encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/graham/PythonProjects/iwa/app.py", line 31, in index
+    db_access_info = pg_utils.get_db_access_info()
+  File "/home/graham/PythonProjects/iwa/pg_utils.py", line 20, in get_db_access_info
+    db_password = keyring.get_password(cf.configfile[cf.computername]
+NameError: name 'keyring' is not defined
+18.6.0
+[27/Apr/2021:15:54:49] ENGINE Keyboard Interrupt: shutting down bus
+[27/Apr/2021:15:54:49] ENGINE Bus STOPPING
+[27/Apr/2021:15:54:49] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 8090)) shut down
+[27/Apr/2021:15:54:49] ENGINE Stopped thread 'Autoreloader'.
+[27/Apr/2021:15:54:49] ENGINE Bus STOPPED
+[27/Apr/2021:15:54:49] ENGINE Bus EXITING
+[27/Apr/2021:15:54:49] ENGINE Bus EXITED
+[27/Apr/2021:15:54:49] ENGINE Waiting for child threads to terminate...
+[27/Apr/2021:15:55:08] ENGINE Listening for SIGTERM.
+[27/Apr/2021:15:55:08] ENGINE Listening for SIGHUP.
+[27/Apr/2021:15:55:08] ENGINE Listening for SIGUSR1.
+[27/Apr/2021:15:55:08] ENGINE Bus STARTING
+[27/Apr/2021:15:55:08] ENGINE Started monitor thread 'Autoreloader'.
+[27/Apr/2021:15:55:09] ENGINE Serving on http://0.0.0.0:8090
+[27/Apr/2021:15:55:09] ENGINE Bus STARTED
+[27/Apr/2021:15:55:12] HTTP 
+Traceback (most recent call last):
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/lib/encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/graham/PythonProjects/iwa/app.py", line 32, in index
+    with psycopg2.connect(database=db_access_info[0],
+NameError: name 'psycopg2' is not defined
+[27/Apr/2021:15:55:12] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 0.0.0.0:8090
+  USER-AGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:87.0) Gecko/20100101 Firefox/87.0
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  ACCEPT-LANGUAGE: mi,en-US;q=0.7,en;q=0.3
+  ACCEPT-ENCODING: gzip, deflate
+  DNT: 1
+  CONNECTION: keep-alive
+  REFERER: http://0.0.0.0:8090/iwa/
+  UPGRADE-INSECURE-REQUESTS: 1
+  SEC-GPC: 1
+[27/Apr/2021:15:55:13]  EMAIL FAIL 2 500 Internal Server ErrorThe server encountered an unexpected condition which prevented it from fulfilling the request.Traceback (most recent call last):
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/lib/encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/graham/PythonProjects/iwa/app.py", line 32, in index
+    with psycopg2.connect(database=db_access_info[0],
+NameError: name 'psycopg2' is not defined
+18.6.0
+[27/Apr/2021:15:55:14]  EMAIL FAIL 4 orotau@webfaction.com
+[27/Apr/2021:15:55:14]  EMAIL FAIL 4 pangakupu@gmail.com
+[27/Apr/2021:15:55:14]  EMAIL FAIL 4 TEST ENVIRONMENT - Pangakupu - 500 Internal Server Error
+[27/Apr/2021:15:55:14]  EMAIL FAIL 4 500 Internal Server ErrorThe server encountered an unexpected condition which prevented it from fulfilling the request.Traceback (most recent call last):
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/lib/encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/graham/PythonProjects/iwa/app.py", line 32, in index
+    with psycopg2.connect(database=db_access_info[0],
+NameError: name 'psycopg2' is not defined
+18.6.0
+[27/Apr/2021:17:05:59] ENGINE Restarting because /home/graham/PythonProjects/iwa/pg_utils.py changed.
+[27/Apr/2021:17:05:59] ENGINE Stopped thread 'Autoreloader'.
+[27/Apr/2021:17:05:59] ENGINE Bus STOPPING
+[27/Apr/2021:17:05:59] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 8090)) shut down
+[27/Apr/2021:17:05:59] ENGINE Bus STOPPED
+[27/Apr/2021:17:05:59] ENGINE Bus EXITING
+[27/Apr/2021:17:05:59] ENGINE Bus EXITED
+[27/Apr/2021:17:05:59] ENGINE Waiting for child threads to terminate...
+[27/Apr/2021:17:05:59] ENGINE Re-spawning python serve.py
+[27/Apr/2021:17:05:59] ENGINE Listening for SIGTERM.
+[27/Apr/2021:17:05:59] ENGINE Listening for SIGHUP.
+[27/Apr/2021:17:05:59] ENGINE Listening for SIGUSR1.
+[27/Apr/2021:17:05:59] ENGINE Bus STARTING
+[27/Apr/2021:17:05:59] ENGINE Started monitor thread 'Autoreloader'.
+[27/Apr/2021:17:05:59] ENGINE Serving on http://0.0.0.0:8090
+[27/Apr/2021:17:05:59] ENGINE Bus STARTED
+[27/Apr/2021:17:12:49] ENGINE Restarting because /home/graham/PythonProjects/iwa/pg_utils.py changed.
+[27/Apr/2021:17:12:49] ENGINE Stopped thread 'Autoreloader'.
+[27/Apr/2021:17:12:49] ENGINE Bus STOPPING
+[27/Apr/2021:17:12:49] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 8090)) shut down
+[27/Apr/2021:17:12:49] ENGINE Bus STOPPED
+[27/Apr/2021:17:12:49] ENGINE Bus EXITING
+[27/Apr/2021:17:12:49] ENGINE Bus EXITED
+[27/Apr/2021:17:12:49] ENGINE Waiting for child threads to terminate...
+[27/Apr/2021:17:12:49] ENGINE Re-spawning python serve.py
+[27/Apr/2021:19:24:07] ENGINE Listening for SIGTERM.
+[27/Apr/2021:19:24:07] ENGINE Listening for SIGHUP.
+[27/Apr/2021:19:24:07] ENGINE Listening for SIGUSR1.
+[27/Apr/2021:19:24:07] ENGINE Bus STARTING
+[27/Apr/2021:19:24:07] ENGINE Started monitor thread 'Autoreloader'.
+[27/Apr/2021:19:24:07] ENGINE Serving on http://0.0.0.0:8090
+[27/Apr/2021:19:24:07] ENGINE Bus STARTED
+[27/Apr/2021:19:24:12] HTTP 
+Traceback (most recent call last):
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/lib/encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/graham/PythonProjects/iwa/app.py", line 31, in index
+    db_access_info = pg_utils.get_db_access_info()
+NameError: name 'pg_utils' is not defined
+[27/Apr/2021:19:24:12] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 0.0.0.0:8090
+  USER-AGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:87.0) Gecko/20100101 Firefox/87.0
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  ACCEPT-LANGUAGE: mi,en-US;q=0.7,en;q=0.3
+  ACCEPT-ENCODING: gzip, deflate
+  DNT: 1
+  CONNECTION: keep-alive
+  UPGRADE-INSECURE-REQUESTS: 1
+  SEC-GPC: 1
+  CACHE-CONTROL: max-age=0
+[27/Apr/2021:19:24:13]  EMAIL FAIL 2 500 Internal Server ErrorThe server encountered an unexpected condition which prevented it from fulfilling the request.Traceback (most recent call last):
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/lib/encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/graham/PythonProjects/iwa/app.py", line 31, in index
+    db_access_info = pg_utils.get_db_access_info()
+NameError: name 'pg_utils' is not defined
+18.6.0
+[27/Apr/2021:19:24:14]  EMAIL FAIL 4 orotau@webfaction.com
+[27/Apr/2021:19:24:14]  EMAIL FAIL 4 pangakupu@gmail.com
+[27/Apr/2021:19:24:14]  EMAIL FAIL 4 TEST ENVIRONMENT - Pangakupu - 500 Internal Server Error
+[27/Apr/2021:19:24:14]  EMAIL FAIL 4 500 Internal Server ErrorThe server encountered an unexpected condition which prevented it from fulfilling the request.Traceback (most recent call last):
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/lib/encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/graham/PythonProjects/iwa/app.py", line 31, in index
+    db_access_info = pg_utils.get_db_access_info()
+NameError: name 'pg_utils' is not defined
+18.6.0
+[27/Apr/2021:19:27:51] ENGINE Restarting because /home/graham/PythonProjects/iwa/app.py changed.
+[27/Apr/2021:19:27:51] ENGINE Stopped thread 'Autoreloader'.
+[27/Apr/2021:19:27:51] ENGINE Bus STOPPING
+[27/Apr/2021:19:27:51] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 8090)) shut down
+[27/Apr/2021:19:27:51] ENGINE Bus STOPPED
+[27/Apr/2021:19:27:51] ENGINE Bus EXITING
+[27/Apr/2021:19:27:51] ENGINE Bus EXITED
+[27/Apr/2021:19:27:51] ENGINE Waiting for child threads to terminate...
+[27/Apr/2021:19:27:51] ENGINE Re-spawning python serve.py
+[27/Apr/2021:19:27:51] ENGINE Listening for SIGTERM.
+[27/Apr/2021:19:27:51] ENGINE Listening for SIGHUP.
+[27/Apr/2021:19:27:51] ENGINE Listening for SIGUSR1.
+[27/Apr/2021:19:27:51] ENGINE Bus STARTING
+[27/Apr/2021:19:27:51] ENGINE Started monitor thread 'Autoreloader'.
+[27/Apr/2021:19:27:51] ENGINE Serving on http://0.0.0.0:8090
+[27/Apr/2021:19:27:51] ENGINE Bus STARTED
+[27/Apr/2021:19:27:58] HTTP 
+Traceback (most recent call last):
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/lib/encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/graham/PythonProjects/iwa/app.py", line 41, in index
+    word_centre_letter = cursor.fetchall()  # list of 1 tuple
+NameError: name 'cursor' is not defined
+[27/Apr/2021:19:27:58] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 0.0.0.0:8090
+  USER-AGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:87.0) Gecko/20100101 Firefox/87.0
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  ACCEPT-LANGUAGE: mi,en-US;q=0.7,en;q=0.3
+  ACCEPT-ENCODING: gzip, deflate
+  DNT: 1
+  CONNECTION: keep-alive
+  REFERER: http://0.0.0.0:8090/iwa/
+  UPGRADE-INSECURE-REQUESTS: 1
+  SEC-GPC: 1
+[27/Apr/2021:19:27:59]  EMAIL FAIL 2 500 Internal Server ErrorThe server encountered an unexpected condition which prevented it from fulfilling the request.Traceback (most recent call last):
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/lib/encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/graham/PythonProjects/iwa/app.py", line 41, in index
+    word_centre_letter = cursor.fetchall()  # list of 1 tuple
+NameError: name 'cursor' is not defined
+18.6.0
+[27/Apr/2021:19:27:59]  EMAIL FAIL 4 orotau@webfaction.com
+[27/Apr/2021:19:27:59]  EMAIL FAIL 4 pangakupu@gmail.com
+[27/Apr/2021:19:27:59]  EMAIL FAIL 4 TEST ENVIRONMENT - Pangakupu - 500 Internal Server Error
+[27/Apr/2021:19:27:59]  EMAIL FAIL 4 500 Internal Server ErrorThe server encountered an unexpected condition which prevented it from fulfilling the request.Traceback (most recent call last):
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/lib/encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/graham/PythonProjects/iwa/app.py", line 41, in index
+    word_centre_letter = cursor.fetchall()  # list of 1 tuple
+NameError: name 'cursor' is not defined
+18.6.0
+[27/Apr/2021:19:28:59] ENGINE Restarting because /home/graham/PythonProjects/iwa/app.py changed.
+[27/Apr/2021:19:28:59] ENGINE Stopped thread 'Autoreloader'.
+[27/Apr/2021:19:28:59] ENGINE Bus STOPPING
+[27/Apr/2021:19:28:59] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 8090)) shut down
+[27/Apr/2021:19:28:59] ENGINE Bus STOPPED
+[27/Apr/2021:19:28:59] ENGINE Bus EXITING
+[27/Apr/2021:19:28:59] ENGINE Bus EXITED
+[27/Apr/2021:19:28:59] ENGINE Waiting for child threads to terminate...
+[27/Apr/2021:19:28:59] ENGINE Re-spawning python serve.py
+[27/Apr/2021:19:28:59] ENGINE Listening for SIGTERM.
+[27/Apr/2021:19:28:59] ENGINE Listening for SIGHUP.
+[27/Apr/2021:19:28:59] ENGINE Listening for SIGUSR1.
+[27/Apr/2021:19:28:59] ENGINE Bus STARTING
+[27/Apr/2021:19:28:59] ENGINE Started monitor thread 'Autoreloader'.
+[27/Apr/2021:19:28:59] ENGINE Serving on http://0.0.0.0:8090
+[27/Apr/2021:19:28:59] ENGINE Bus STARTED
+[27/Apr/2021:19:29:10] HTTP 
+Traceback (most recent call last):
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/lib/encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/graham/PythonProjects/iwa/app.py", line 121, in board
+    children = pk.get_children(koru, koru[8])
+  File "/home/graham/PythonProjects/iwa/pangakupu.py", line 62, in get_children
+    db_access_info = pg_utils.get_db_access_info()
+NameError: name 'pg_utils' is not defined
+[27/Apr/2021:19:29:10] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 0.0.0.0:8090
+  USER-AGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:87.0) Gecko/20100101 Firefox/87.0
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  ACCEPT-LANGUAGE: mi,en-US;q=0.7,en;q=0.3
+  ACCEPT-ENCODING: gzip, deflate
+  DNT: 1
+  CONNECTION: keep-alive
+  REFERER: http://0.0.0.0:8090/iwa/
+  UPGRADE-INSECURE-REQUESTS: 1
+  SEC-GPC: 1
+[27/Apr/2021:19:29:11]  EMAIL FAIL 2 500 Internal Server ErrorThe server encountered an unexpected condition which prevented it from fulfilling the request.Traceback (most recent call last):
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/lib/encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/graham/PythonProjects/iwa/app.py", line 121, in board
+    children = pk.get_children(koru, koru[8])
+  File "/home/graham/PythonProjects/iwa/pangakupu.py", line 62, in get_children
+    db_access_info = pg_utils.get_db_access_info()
+NameError: name 'pg_utils' is not defined
+18.6.0
+[27/Apr/2021:19:29:11]  EMAIL FAIL 4 orotau@webfaction.com
+[27/Apr/2021:19:29:11]  EMAIL FAIL 4 pangakupu@gmail.com
+[27/Apr/2021:19:29:11]  EMAIL FAIL 4 TEST ENVIRONMENT - Pangakupu - 500 Internal Server Error
+[27/Apr/2021:19:29:11]  EMAIL FAIL 4 500 Internal Server ErrorThe server encountered an unexpected condition which prevented it from fulfilling the request.Traceback (most recent call last):
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/lib/encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/graham/PythonProjects/iwa/app.py", line 121, in board
+    children = pk.get_children(koru, koru[8])
+  File "/home/graham/PythonProjects/iwa/pangakupu.py", line 62, in get_children
+    db_access_info = pg_utils.get_db_access_info()
+NameError: name 'pg_utils' is not defined
+18.6.0
+[27/Apr/2021:19:30:37] ENGINE Restarting because /home/graham/PythonProjects/iwa/pangakupu.py changed.
+[27/Apr/2021:19:30:37] ENGINE Stopped thread 'Autoreloader'.
+[27/Apr/2021:19:30:37] ENGINE Bus STOPPING
+[27/Apr/2021:19:30:37] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 8090)) shut down
+[27/Apr/2021:19:30:37] ENGINE Bus STOPPED
+[27/Apr/2021:19:30:37] ENGINE Bus EXITING
+[27/Apr/2021:19:30:37] ENGINE Bus EXITED
+[27/Apr/2021:19:30:37] ENGINE Waiting for child threads to terminate...
+[27/Apr/2021:19:30:37] ENGINE Re-spawning python serve.py
+[27/Apr/2021:19:30:37] ENGINE Listening for SIGTERM.
+[27/Apr/2021:19:30:37] ENGINE Listening for SIGHUP.
+[27/Apr/2021:19:30:37] ENGINE Listening for SIGUSR1.
+[27/Apr/2021:19:30:37] ENGINE Bus STARTING
+[27/Apr/2021:19:30:37] ENGINE Started monitor thread 'Autoreloader'.
+[27/Apr/2021:19:30:37] ENGINE Serving on http://0.0.0.0:8090
+[27/Apr/2021:19:30:37] ENGINE Bus STARTED
+[27/Apr/2021:19:31:32] ENGINE Restarting because /home/graham/PythonProjects/iwa/pangakupu.py changed.
+[27/Apr/2021:19:31:32] ENGINE Stopped thread 'Autoreloader'.
+[27/Apr/2021:19:31:32] ENGINE Bus STOPPING
+[27/Apr/2021:19:31:32] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 8090)) shut down
+[27/Apr/2021:19:31:32] ENGINE Bus STOPPED
+[27/Apr/2021:19:31:32] ENGINE Bus EXITING
+[27/Apr/2021:19:31:32] ENGINE Bus EXITED
+[27/Apr/2021:19:31:32] ENGINE Waiting for child threads to terminate...
+[27/Apr/2021:19:31:32] ENGINE Re-spawning python serve.py
+[27/Apr/2021:19:31:33] ENGINE Listening for SIGTERM.
+[27/Apr/2021:19:31:33] ENGINE Listening for SIGHUP.
+[27/Apr/2021:19:31:33] ENGINE Listening for SIGUSR1.
+[27/Apr/2021:19:31:33] ENGINE Bus STARTING
+[27/Apr/2021:19:31:33] ENGINE Started monitor thread 'Autoreloader'.
+[27/Apr/2021:19:31:33] ENGINE Serving on http://0.0.0.0:8090
+[27/Apr/2021:19:31:33] ENGINE Bus STARTED
+[27/Apr/2021:19:31:42] HTTP 
+Traceback (most recent call last):
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/lib/encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/graham/PythonProjects/iwa/app.py", line 121, in board
+    children = pk.get_children(koru, koru[8])
+  File "/home/graham/PythonProjects/iwa/pangakupu.py", line 68, in get_children
+    connection.close()
+NameError: name 'connection' is not defined
+[27/Apr/2021:19:31:42] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 0.0.0.0:8090
+  USER-AGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:87.0) Gecko/20100101 Firefox/87.0
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  ACCEPT-LANGUAGE: mi,en-US;q=0.7,en;q=0.3
+  ACCEPT-ENCODING: gzip, deflate
+  DNT: 1
+  CONNECTION: keep-alive
+  REFERER: http://0.0.0.0:8090/iwa/
+  UPGRADE-INSECURE-REQUESTS: 1
+  SEC-GPC: 1
+[27/Apr/2021:19:31:44]  EMAIL FAIL 2 500 Internal Server ErrorThe server encountered an unexpected condition which prevented it from fulfilling the request.Traceback (most recent call last):
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/lib/encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/graham/PythonProjects/iwa/app.py", line 121, in board
+    children = pk.get_children(koru, koru[8])
+  File "/home/graham/PythonProjects/iwa/pangakupu.py", line 68, in get_children
+    connection.close()
+NameError: name 'connection' is not defined
+18.6.0
+[27/Apr/2021:19:31:44]  EMAIL FAIL 4 orotau@webfaction.com
+[27/Apr/2021:19:31:44]  EMAIL FAIL 4 pangakupu@gmail.com
+[27/Apr/2021:19:31:44]  EMAIL FAIL 4 TEST ENVIRONMENT - Pangakupu - 500 Internal Server Error
+[27/Apr/2021:19:31:44]  EMAIL FAIL 4 500 Internal Server ErrorThe server encountered an unexpected condition which prevented it from fulfilling the request.Traceback (most recent call last):
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/lib/encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/graham/PythonProjects/iwa/app.py", line 121, in board
+    children = pk.get_children(koru, koru[8])
+  File "/home/graham/PythonProjects/iwa/pangakupu.py", line 68, in get_children
+    connection.close()
+NameError: name 'connection' is not defined
+18.6.0
+[27/Apr/2021:19:32:17] ENGINE Restarting because /home/graham/PythonProjects/iwa/pangakupu.py changed.
+[27/Apr/2021:19:32:17] ENGINE Stopped thread 'Autoreloader'.
+[27/Apr/2021:19:32:17] ENGINE Bus STOPPING
+[27/Apr/2021:19:32:17] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 8090)) shut down
+[27/Apr/2021:19:32:17] ENGINE Bus STOPPED
+[27/Apr/2021:19:32:17] ENGINE Bus EXITING
+[27/Apr/2021:19:32:17] ENGINE Bus EXITED
+[27/Apr/2021:19:32:17] ENGINE Waiting for child threads to terminate...
+[27/Apr/2021:19:32:17] ENGINE Re-spawning python serve.py
+[27/Apr/2021:19:32:17] ENGINE Listening for SIGTERM.
+[27/Apr/2021:19:32:17] ENGINE Listening for SIGHUP.
+[27/Apr/2021:19:32:17] ENGINE Listening for SIGUSR1.
+[27/Apr/2021:19:32:17] ENGINE Bus STARTING
+[27/Apr/2021:19:32:17] ENGINE Started monitor thread 'Autoreloader'.
+[27/Apr/2021:19:32:17] ENGINE Serving on http://0.0.0.0:8090
+[27/Apr/2021:19:32:17] ENGINE Bus STARTED
+[27/Apr/2021:19:32:24] HTTP 
+Traceback (most recent call last):
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/lib/encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/graham/PythonProjects/iwa/app.py", line 122, in board
+    groups = difficulty_level.group_children(children)
+  File "/home/graham/PythonProjects/iwa/difficulty_level.py", line 96, in group_children
+    db_access_info = pg_utils.get_db_access_info()
+NameError: name 'pg_utils' is not defined
+[27/Apr/2021:19:32:24] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 0.0.0.0:8090
+  USER-AGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:87.0) Gecko/20100101 Firefox/87.0
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  ACCEPT-LANGUAGE: mi,en-US;q=0.7,en;q=0.3
+  ACCEPT-ENCODING: gzip, deflate
+  DNT: 1
+  CONNECTION: keep-alive
+  REFERER: http://0.0.0.0:8090/iwa/
+  UPGRADE-INSECURE-REQUESTS: 1
+  SEC-GPC: 1
+[27/Apr/2021:19:32:26]  EMAIL FAIL 2 500 Internal Server ErrorThe server encountered an unexpected condition which prevented it from fulfilling the request.Traceback (most recent call last):
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/lib/encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/graham/PythonProjects/iwa/app.py", line 122, in board
+    groups = difficulty_level.group_children(children)
+  File "/home/graham/PythonProjects/iwa/difficulty_level.py", line 96, in group_children
+    db_access_info = pg_utils.get_db_access_info()
+NameError: name 'pg_utils' is not defined
+18.6.0
+[27/Apr/2021:19:32:26]  EMAIL FAIL 4 orotau@webfaction.com
+[27/Apr/2021:19:32:26]  EMAIL FAIL 4 pangakupu@gmail.com
+[27/Apr/2021:19:32:26]  EMAIL FAIL 4 TEST ENVIRONMENT - Pangakupu - 500 Internal Server Error
+[27/Apr/2021:19:32:26]  EMAIL FAIL 4 500 Internal Server ErrorThe server encountered an unexpected condition which prevented it from fulfilling the request.Traceback (most recent call last):
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/lib/encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/graham/PythonProjects/iwa/app.py", line 122, in board
+    groups = difficulty_level.group_children(children)
+  File "/home/graham/PythonProjects/iwa/difficulty_level.py", line 96, in group_children
+    db_access_info = pg_utils.get_db_access_info()
+NameError: name 'pg_utils' is not defined
+18.6.0
+[27/Apr/2021:19:33:05] ENGINE Restarting because /home/graham/PythonProjects/iwa/difficulty_level.py changed.
+[27/Apr/2021:19:33:05] ENGINE Stopped thread 'Autoreloader'.
+[27/Apr/2021:19:33:05] ENGINE Bus STOPPING
+[27/Apr/2021:19:33:05] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 8090)) shut down
+[27/Apr/2021:19:33:05] ENGINE Bus STOPPED
+[27/Apr/2021:19:33:05] ENGINE Bus EXITING
+[27/Apr/2021:19:33:05] ENGINE Bus EXITED
+[27/Apr/2021:19:33:05] ENGINE Waiting for child threads to terminate...
+[27/Apr/2021:19:33:05] ENGINE Re-spawning python serve.py
+[27/Apr/2021:19:33:05] ENGINE Listening for SIGTERM.
+[27/Apr/2021:19:33:05] ENGINE Listening for SIGHUP.
+[27/Apr/2021:19:33:05] ENGINE Listening for SIGUSR1.
+[27/Apr/2021:19:33:05] ENGINE Bus STARTING
+[27/Apr/2021:19:33:05] ENGINE Started monitor thread 'Autoreloader'.
+[27/Apr/2021:19:33:05] ENGINE Serving on http://0.0.0.0:8090
+[27/Apr/2021:19:33:05] ENGINE Bus STARTED
+[27/Apr/2021:19:36:19] ENGINE Restarting because /home/graham/PythonProjects/iwa/difficulty_level.py changed.
+[27/Apr/2021:19:36:19] ENGINE Stopped thread 'Autoreloader'.
+[27/Apr/2021:19:36:19] ENGINE Bus STOPPING
+[27/Apr/2021:19:36:19] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 8090)) shut down
+[27/Apr/2021:19:36:19] ENGINE Bus STOPPED
+[27/Apr/2021:19:36:19] ENGINE Bus EXITING
+[27/Apr/2021:19:36:19] ENGINE Bus EXITED
+[27/Apr/2021:19:36:19] ENGINE Waiting for child threads to terminate...
+[27/Apr/2021:19:36:19] ENGINE Re-spawning python serve.py
+[27/Apr/2021:19:36:19] ENGINE Listening for SIGTERM.
+[27/Apr/2021:19:36:19] ENGINE Listening for SIGHUP.
+[27/Apr/2021:19:36:19] ENGINE Listening for SIGUSR1.
+[27/Apr/2021:19:36:19] ENGINE Bus STARTING
+[27/Apr/2021:19:36:19] ENGINE Started monitor thread 'Autoreloader'.
+[27/Apr/2021:19:36:19] ENGINE Serving on http://0.0.0.0:8090
+[27/Apr/2021:19:36:19] ENGINE Bus STARTED
+[27/Apr/2021:19:37:17] ENGINE Restarting because /home/graham/PythonProjects/iwa/difficulty_level.py changed.
+[27/Apr/2021:19:37:17] ENGINE Stopped thread 'Autoreloader'.
+[27/Apr/2021:19:37:17] ENGINE Bus STOPPING
+[27/Apr/2021:19:37:17] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 8090)) shut down
+[27/Apr/2021:19:37:17] ENGINE Bus STOPPED
+[27/Apr/2021:19:37:17] ENGINE Bus EXITING
+[27/Apr/2021:19:37:17] ENGINE Bus EXITED
+[27/Apr/2021:19:37:17] ENGINE Waiting for child threads to terminate...
+[27/Apr/2021:19:37:17] ENGINE Re-spawning python serve.py
+[27/Apr/2021:19:37:17] ENGINE Listening for SIGTERM.
+[27/Apr/2021:19:37:17] ENGINE Listening for SIGHUP.
+[27/Apr/2021:19:37:17] ENGINE Listening for SIGUSR1.
+[27/Apr/2021:19:37:17] ENGINE Bus STARTING
+[27/Apr/2021:19:37:17] ENGINE Started monitor thread 'Autoreloader'.
+[27/Apr/2021:19:37:17] ENGINE Serving on http://0.0.0.0:8090
+[27/Apr/2021:19:37:17] ENGINE Bus STARTED
+[27/Apr/2021:19:37:27] HTTP 
+Traceback (most recent call last):
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/lib/encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/graham/PythonProjects/iwa/app.py", line 122, in board
+    groups = difficulty_level.group_children(children)
+  File "/home/graham/PythonProjects/iwa/difficulty_level.py", line 108, in group_children
+    cur.execute(frequency_data_query, (child,))
+sqlite3.OperationalError: near "%": syntax error
+[27/Apr/2021:19:37:27] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 0.0.0.0:8090
+  USER-AGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:87.0) Gecko/20100101 Firefox/87.0
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  ACCEPT-LANGUAGE: mi,en-US;q=0.7,en;q=0.3
+  ACCEPT-ENCODING: gzip, deflate
+  DNT: 1
+  CONNECTION: keep-alive
+  REFERER: http://0.0.0.0:8090/iwa/
+  UPGRADE-INSECURE-REQUESTS: 1
+  SEC-GPC: 1
+[27/Apr/2021:19:37:28]  EMAIL FAIL 2 500 Internal Server ErrorThe server encountered an unexpected condition which prevented it from fulfilling the request.Traceback (most recent call last):
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/lib/encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/graham/PythonProjects/iwa/app.py", line 122, in board
+    groups = difficulty_level.group_children(children)
+  File "/home/graham/PythonProjects/iwa/difficulty_level.py", line 108, in group_children
+    cur.execute(frequency_data_query, (child,))
+sqlite3.OperationalError: near "%": syntax error
+18.6.0
+[27/Apr/2021:19:37:28]  EMAIL FAIL 4 orotau@webfaction.com
+[27/Apr/2021:19:37:28]  EMAIL FAIL 4 pangakupu@gmail.com
+[27/Apr/2021:19:37:28]  EMAIL FAIL 4 TEST ENVIRONMENT - Pangakupu - 500 Internal Server Error
+[27/Apr/2021:19:37:28]  EMAIL FAIL 4 500 Internal Server ErrorThe server encountered an unexpected condition which prevented it from fulfilling the request.Traceback (most recent call last):
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/lib/encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/graham/PythonProjects/iwa/app.py", line 122, in board
+    groups = difficulty_level.group_children(children)
+  File "/home/graham/PythonProjects/iwa/difficulty_level.py", line 108, in group_children
+    cur.execute(frequency_data_query, (child,))
+sqlite3.OperationalError: near "%": syntax error
+18.6.0
+[27/Apr/2021:19:40:30] ENGINE Restarting because /home/graham/PythonProjects/iwa/difficulty_level.py changed.
+[27/Apr/2021:19:40:30] ENGINE Stopped thread 'Autoreloader'.
+[27/Apr/2021:19:40:30] ENGINE Bus STOPPING
+[27/Apr/2021:19:40:30] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 8090)) shut down
+[27/Apr/2021:19:40:30] ENGINE Bus STOPPED
+[27/Apr/2021:19:40:30] ENGINE Bus EXITING
+[27/Apr/2021:19:40:30] ENGINE Bus EXITED
+[27/Apr/2021:19:40:30] ENGINE Waiting for child threads to terminate...
+[27/Apr/2021:19:40:30] ENGINE Re-spawning python serve.py
+[27/Apr/2021:19:40:30] ENGINE Listening for SIGTERM.
+[27/Apr/2021:19:40:30] ENGINE Listening for SIGHUP.
+[27/Apr/2021:19:40:30] ENGINE Listening for SIGUSR1.
+[27/Apr/2021:19:40:30] ENGINE Bus STARTING
+[27/Apr/2021:19:40:30] ENGINE Started monitor thread 'Autoreloader'.
+[27/Apr/2021:19:40:31] ENGINE Serving on http://0.0.0.0:8090
+[27/Apr/2021:19:40:31] ENGINE Bus STARTED
+[27/Apr/2021:19:40:46] ENGINE Keyboard Interrupt: shutting down bus
+[27/Apr/2021:19:40:46] ENGINE Bus STOPPING
+[27/Apr/2021:19:40:46] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 8090)) shut down
+[27/Apr/2021:19:40:46] ENGINE Stopped thread 'Autoreloader'.
+[27/Apr/2021:19:40:46] ENGINE Bus STOPPED
+[27/Apr/2021:19:40:46] ENGINE Bus EXITING
+[27/Apr/2021:19:40:46] ENGINE Bus EXITED
+[27/Apr/2021:19:40:46] ENGINE Waiting for child threads to terminate...
+[27/Apr/2021:19:41:20] ENGINE Listening for SIGTERM.
+[27/Apr/2021:19:41:20] ENGINE Listening for SIGHUP.
+[27/Apr/2021:19:41:20] ENGINE Listening for SIGUSR1.
+[27/Apr/2021:19:41:20] ENGINE Bus STARTING
+[27/Apr/2021:19:41:20] ENGINE Started monitor thread 'Autoreloader'.
+[27/Apr/2021:19:41:21] ENGINE Serving on http://0.0.0.0:8090
+[27/Apr/2021:19:41:21] ENGINE Bus STARTED
+[27/Apr/2021:19:42:27] ENGINE Restarting because /home/graham/PythonProjects/iwa/difficulty_level.py changed.
+[27/Apr/2021:19:42:27] ENGINE Stopped thread 'Autoreloader'.
+[27/Apr/2021:19:42:27] ENGINE Bus STOPPING
+[27/Apr/2021:19:42:27] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 8090)) shut down
+[27/Apr/2021:19:42:27] ENGINE Bus STOPPED
+[27/Apr/2021:19:42:27] ENGINE Bus EXITING
+[27/Apr/2021:19:42:27] ENGINE Bus EXITED
+[27/Apr/2021:19:42:27] ENGINE Waiting for child threads to terminate...
+[27/Apr/2021:19:42:27] ENGINE Re-spawning python serve.py
+[27/Apr/2021:19:42:27] ENGINE Listening for SIGTERM.
+[27/Apr/2021:19:42:27] ENGINE Listening for SIGHUP.
+[27/Apr/2021:19:42:27] ENGINE Listening for SIGUSR1.
+[27/Apr/2021:19:42:27] ENGINE Bus STARTING
+[27/Apr/2021:19:42:27] ENGINE Started monitor thread 'Autoreloader'.
+[27/Apr/2021:19:42:27] ENGINE Serving on http://0.0.0.0:8090
+[27/Apr/2021:19:42:27] ENGINE Bus STARTED
+[27/Apr/2021:19:42:55] HTTP 
+Traceback (most recent call last):
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/lib/encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/graham/PythonProjects/iwa/app.py", line 122, in board
+    groups = difficulty_level.group_children(children)
+  File "/home/graham/PythonProjects/iwa/difficulty_level.py", line 98, in group_children
+    cur.execute("SELECT frequency FROM waf WHERE word=?", (child,))
+sqlite3.ProgrammingError: Cannot operate on a closed database.
+[27/Apr/2021:19:42:55] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 0.0.0.0:8090
+  USER-AGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:87.0) Gecko/20100101 Firefox/87.0
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  ACCEPT-LANGUAGE: mi,en-US;q=0.7,en;q=0.3
+  ACCEPT-ENCODING: gzip, deflate
+  DNT: 1
+  CONNECTION: keep-alive
+  REFERER: http://0.0.0.0:8090/iwa/
+  UPGRADE-INSECURE-REQUESTS: 1
+  SEC-GPC: 1
+[27/Apr/2021:19:42:56]  EMAIL FAIL 2 500 Internal Server ErrorThe server encountered an unexpected condition which prevented it from fulfilling the request.Traceback (most recent call last):
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/lib/encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/graham/PythonProjects/iwa/app.py", line 122, in board
+    groups = difficulty_level.group_children(children)
+  File "/home/graham/PythonProjects/iwa/difficulty_level.py", line 98, in group_children
+    cur.execute("SELECT frequency FROM waf WHERE word=?", (child,))
+sqlite3.ProgrammingError: Cannot operate on a closed database.
+18.6.0
+[27/Apr/2021:19:42:56]  EMAIL FAIL 4 orotau@webfaction.com
+[27/Apr/2021:19:42:56]  EMAIL FAIL 4 pangakupu@gmail.com
+[27/Apr/2021:19:42:56]  EMAIL FAIL 4 TEST ENVIRONMENT - Pangakupu - 500 Internal Server Error
+[27/Apr/2021:19:42:56]  EMAIL FAIL 4 500 Internal Server ErrorThe server encountered an unexpected condition which prevented it from fulfilling the request.Traceback (most recent call last):
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/lib/encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/graham/PythonProjects/iwa/app.py", line 122, in board
+    groups = difficulty_level.group_children(children)
+  File "/home/graham/PythonProjects/iwa/difficulty_level.py", line 98, in group_children
+    cur.execute("SELECT frequency FROM waf WHERE word=?", (child,))
+sqlite3.ProgrammingError: Cannot operate on a closed database.
+18.6.0
+[27/Apr/2021:19:44:31] ENGINE Restarting because /home/graham/PythonProjects/iwa/difficulty_level.py changed.
+[27/Apr/2021:19:44:31] ENGINE Stopped thread 'Autoreloader'.
+[27/Apr/2021:19:44:31] ENGINE Bus STOPPING
+[27/Apr/2021:19:44:31] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 8090)) shut down
+[27/Apr/2021:19:44:31] ENGINE Bus STOPPED
+[27/Apr/2021:19:44:31] ENGINE Bus EXITING
+[27/Apr/2021:19:44:31] ENGINE Bus EXITED
+[27/Apr/2021:19:44:31] ENGINE Waiting for child threads to terminate...
+[27/Apr/2021:19:44:31] ENGINE Re-spawning python serve.py
+[27/Apr/2021:19:44:31] ENGINE Listening for SIGTERM.
+[27/Apr/2021:19:44:31] ENGINE Listening for SIGHUP.
+[27/Apr/2021:19:44:31] ENGINE Listening for SIGUSR1.
+[27/Apr/2021:19:44:31] ENGINE Bus STARTING
+[27/Apr/2021:19:44:31] ENGINE Started monitor thread 'Autoreloader'.
+[27/Apr/2021:19:44:31] ENGINE Serving on http://0.0.0.0:8090
+[27/Apr/2021:19:44:31] ENGINE Bus STARTED
+[27/Apr/2021:19:47:10]  EMAIL FAIL 2 g
+[27/Apr/2021:19:47:10] HTTP 
+Traceback (most recent call last):
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/lib/encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/graham/PythonProjects/iwa/app.py", line 108, in thankyou
+    self.send_mail(fromm, to, subject, contents)
+  File "/home/graham/PythonProjects/iwa/app.py", line 281, in send_mail
+    mail_access_info = self.get_mail_access_info(test_or_production)
+  File "/home/graham/PythonProjects/iwa/app.py", line 357, in get_mail_access_info
+    mailbox_password = keyring.get_password(crac['gmail_mailbox']
+NameError: name 'keyring' is not defined
+[27/Apr/2021:19:47:10] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 0.0.0.0:8090
+  USER-AGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:87.0) Gecko/20100101 Firefox/87.0
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  ACCEPT-LANGUAGE: mi,en-US;q=0.7,en;q=0.3
+  ACCEPT-ENCODING: gzip, deflate
+  ORIGIN: http://0.0.0.0:8090
+  DNT: 1
+  CONNECTION: keep-alive
+  REFERER: http://0.0.0.0:8090/iwa/contact
+  UPGRADE-INSECURE-REQUESTS: 1
+  SEC-GPC: 1
+  Content-Type: application/x-www-form-urlencoded
+  Content-Length: 10
+[27/Apr/2021:19:47:11]  EMAIL FAIL 2 500 Internal Server ErrorThe server encountered an unexpected condition which prevented it from fulfilling the request.Traceback (most recent call last):
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/lib/encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/graham/PythonProjects/iwa/app.py", line 108, in thankyou
+    self.send_mail(fromm, to, subject, contents)
+  File "/home/graham/PythonProjects/iwa/app.py", line 281, in send_mail
+    mail_access_info = self.get_mail_access_info(test_or_production)
+  File "/home/graham/PythonProjects/iwa/app.py", line 357, in get_mail_access_info
+    mailbox_password = keyring.get_password(crac['gmail_mailbox']
+NameError: name 'keyring' is not defined
+18.6.0
+[27/Apr/2021:19:47:12]  EMAIL FAIL 4 orotau@webfaction.com
+[27/Apr/2021:19:47:12]  EMAIL FAIL 4 pangakupu@gmail.com
+[27/Apr/2021:19:47:12]  EMAIL FAIL 4 TEST ENVIRONMENT - Pangakupu - 500 Internal Server Error
+[27/Apr/2021:19:47:12]  EMAIL FAIL 4 500 Internal Server ErrorThe server encountered an unexpected condition which prevented it from fulfilling the request.Traceback (most recent call last):
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/lib/encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/graham/PythonProjects/iwa/app.py", line 108, in thankyou
+    self.send_mail(fromm, to, subject, contents)
+  File "/home/graham/PythonProjects/iwa/app.py", line 281, in send_mail
+    mail_access_info = self.get_mail_access_info(test_or_production)
+  File "/home/graham/PythonProjects/iwa/app.py", line 357, in get_mail_access_info
+    mailbox_password = keyring.get_password(crac['gmail_mailbox']
+NameError: name 'keyring' is not defined
+18.6.0
+[27/Apr/2021:19:48:59] ENGINE Keyboard Interrupt: shutting down bus
+[27/Apr/2021:19:48:59] ENGINE Bus STOPPING
+[27/Apr/2021:19:48:59] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 8090)) shut down
+[27/Apr/2021:19:48:59] ENGINE Stopped thread 'Autoreloader'.
+[27/Apr/2021:19:48:59] ENGINE Bus STOPPED
+[27/Apr/2021:19:48:59] ENGINE Bus EXITING
+[27/Apr/2021:19:48:59] ENGINE Bus EXITED
+[27/Apr/2021:19:48:59] ENGINE Waiting for child threads to terminate...
