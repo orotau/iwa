@@ -206,3 +206,7 @@
 127.0.0.1 - - [01/May/2021:16:44:47] "GET /static/bootstrap-3.3.5-dist/css/jumbotron-narrow.css HTTP/1.1" 200 1411 "" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:88.0) Gecko/20100101 Firefox/88.0"
 127.0.0.1 - - [01/May/2021:16:44:47] "GET /static/bootstrap-3.3.5-dist/css/bootstrap.min.css HTTP/1.1" 200 122540 "" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:88.0) Gecko/20100101 Firefox/88.0"
 127.0.0.1 - - [01/May/2021:16:47:31] "GET / HTTP/1.1" 200 2384 "http://0.0.0.0:8090/about" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:88.0) Gecko/20100101 Firefox/88.0"
+127.0.0.1 - - [01/May/2021:17:07:21] "GET / HTTP/1.1" 200 2413 "" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:88.0) Gecko/20100101 Firefox/88.0"
+127.0.0.1 - - [01/May/2021:17:07:24] "GET /board?koru=ngotkamao HTTP/1.1" 200 4096 "http://0.0.0.0:8090/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:88.0) Gecko/20100101 Firefox/88.0"
+127.0.0.1 - - [01/May/2021:17:08:08] "GET /board?koru=ngotkamao HTTP/1.1" 200 4067 "http://0.0.0.0:8090/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:88.0) Gecko/20100101 Firefox/88.0"
+127.0.0.1 - - [01/May/2021:17:08:08] "GET /static/bootstrap-3.3.5-dist/js/ie10-viewport-bug-workaround.js HTTP/1.1" 304 - "http://0.0.0.0:8090/board?koru=ngotkamao" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:88.0) Gecko/20100101 Firefox/88.0"

@@ -1294,3 +1294,18 @@ jinja2.exceptions.TemplateNotFound: contact.html
 [01/May/2021:16:47:39] ENGINE Bus EXITING
 [01/May/2021:16:47:39] ENGINE Bus EXITED
 [01/May/2021:16:47:39] ENGINE Waiting for child threads to terminate...
+[01/May/2021:17:07:14] ENGINE Listening for SIGTERM.
+[01/May/2021:17:07:14] ENGINE Listening for SIGHUP.
+[01/May/2021:17:07:14] ENGINE Listening for SIGUSR1.
+[01/May/2021:17:07:14] ENGINE Bus STARTING
+[01/May/2021:17:07:14] ENGINE Started monitor thread 'Autoreloader'.
+[01/May/2021:17:07:14] ENGINE Serving on http://0.0.0.0:8090
+[01/May/2021:17:07:14] ENGINE Bus STARTED
+[01/May/2021:17:08:34] ENGINE Keyboard Interrupt: shutting down bus
+[01/May/2021:17:08:34] ENGINE Bus STOPPING
+[01/May/2021:17:08:34] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 8090)) shut down
+[01/May/2021:17:08:34] ENGINE Stopped thread 'Autoreloader'.
+[01/May/2021:17:08:34] ENGINE Bus STOPPED
+[01/May/2021:17:08:34] ENGINE Bus EXITING
+[01/May/2021:17:08:34] ENGINE Bus EXITED
+[01/May/2021:17:08:34] ENGINE Waiting for child threads to terminate...
