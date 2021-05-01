@@ -13,7 +13,7 @@ class ConfigFile():
 
     config_paths = {
         'graham-desktop-ubuntu': '/home/graham/PythonProjects/iwa/conf/config.txt',
-        'web238.webfaction.com': '/home/orotau/webapps/pk_cp/conf/config.txt'
+        'PythonAnywhere': '/home/orotau/conf/config.txt'
         }
 
     def __init__(self):
@@ -22,7 +22,12 @@ class ConfigFile():
         self.configfile = self.getConfigFile()
 
     def getComputerName(self):
-        return socket.gethostname()
+        # see https://www.pythonanywhere.com/forums/topic/14022/
+        hostname = socket.gethostname()
+        if "live" in hostname:
+            return "PythonAnywhere"
+        else
+            return hostname()
 
     def getPath(self):
         try:

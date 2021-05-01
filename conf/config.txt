@@ -7,7 +7,7 @@ socket_port = 8090
 autoreload = True
 
 
-[web238.webfaction.com]
+[PythonAnywhere]
 iwa_path = /home/orotau/webapps/pk_cp/iwa/
 socket_host = 127.0.0.1
 socket_port = 25251
