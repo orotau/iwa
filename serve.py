@@ -15,7 +15,7 @@ class Server():
         cherrypy.config.update(os.path.join(self.conf_dir, "server.cfg"))
 
         # Our application
-        from app import PangaKupu, Dummy
+        from app import PangaKupu
 
         # Specify the template directory that we use for jinja2 templates
         template_dir = os.path.join(base_dir, "templates")
@@ -23,17 +23,13 @@ class Server():
         # Passing the template directory (there could be a better way)
         self.webapp = PangaKupu(template_dir)
 
-        self.dummyapp = Dummy()
 
     def run(self):
         '''
         See this URL for help
         http://docs.cherrypy.org/en/latest/basics.html#hosting-one-or-more-applications
         '''
-        cherrypy.tree.mount(self.dummyapp, '/',
-                            os.path.join(self.conf_dir, "dummy.cfg"))
-        cherrypy.quickstart(self.webapp, '/iwa',
-                            os.path.join(self.conf_dir, "app.cfg"))
+        cherrypy.quickstart(self.webapp, '', os.path.join(self.conf_dir, "app.cfg"))
 
 
 if __name__ == '__main__':

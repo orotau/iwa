@@ -1,18 +1,10 @@
 import cherrypy
-# import psycopg2
-# import keyring
 import pangakupu as pk
 import pū
 import maoriword as mw
 import difficulty_level
 import sqlite3_utils
 import config
-
-
-class Dummy():
-    @cherrypy.expose
-    def index(self):
-        raise cherrypy.HTTPRedirect('/iwa')
 
 
 class PangaKupu():
@@ -78,36 +70,6 @@ class PangaKupu():
     @cherrypy.expose
     def contact(self):
         template_id = 'contact'
-        template = self.env.get_template(template_id + '.html')
-        return template.render({"template_id": template_id})
-
-
-# ####################################################################
-# PAGE - thankyou
-# ####################################################################
-    @cherrypy.expose
-    def thankyou(self, feedback):
-
-        '''
-        Send an email to pangakupu@gmail.com
-        Content is whatever they have entered.
-
-        Need to connect to an smtp server
-        Will probably be different from test to production
-        '''
-        cf = config.ConfigFile()
-        test_or_production = (cf.configfile[cf.computername]['test_or_production'])
-
-        # subject
-        subject = (test_or_production.upper() +
-                   ' ENVIRONMENT - Pangakupu Feedback')
-        fromm = 'orotau@webfaction.com'  # not used by gmail
-        to = 'pangakupu@gmail.com'
-        contents = feedback
-
-        self.send_mail(fromm, to, subject, contents)
-
-        template_id = 'thankyou'
         template = self.env.get_template(template_id + '.html')
         return template.render({"template_id": template_id})
 
@@ -256,109 +218,9 @@ class PangaKupu():
         return self.example(int(page), jumping)
 
 
-
-
-    def send_mail(self, fromm, to, subject, contents):
-        from smtplib import SMTP
-
-        cf = config.ConfigFile()
-        test_or_production = (cf.configfile[cf.computername]['test_or_production'])
-
-        if test_or_production == 'test':
-            # connect to smtp server for greenbay.graham@gmail.com
-            # http://goo.gl/5AMQVI
-            try:
-                smtp = SMTP("smtp.gmail.com", 587)
-                smtp.ehlo()
-                smtp.starttls()
-            except:
-                cherrypy.log("EMAIL FAIL 1 " + contents)
-                raise
-            else:
-                with smtp:
-                    try:
-                        # get username and password for the webfaction mailbox
-                        mail_access_info = self.get_mail_access_info(test_or_production)
-                        smtp.login(mail_access_info[0], mail_access_info[1])
-                    except:
-                        cherrypy.log("EMAIL FAIL 2 " + contents)
-                        raise
-                    else:
-                        try:
-                            from email.mime.text import MIMEText
-                            msg = MIMEText(contents)
-                            msg['To'] = to
-                            msg['From'] = fromm
-                            msg['Subject'] = subject
-                            smtp.send_message(msg)
-                        except:
-                            cherrypy.log("EMAIL FAIL 3 " + contents)
-                            raise
-
-        elif test_or_production == 'production':
-            # connect to webfaction smtp server
-            try:
-                smtp = SMTP('smtp.webfaction.com', timeout=10)  # 10 seconds
-            except:
-                cherrypy.log("EMAIL FAIL 1 " + contents)
-                raise
-            else:
-                with smtp:
-                    try:
-                        # get username and password for the webfaction mailbox
-                        mail_access_info = self.get_mail_access_info(test_or_production)
-                        smtp.login(mail_access_info[0], mail_access_info[1])
-                    except:
-                        cherrypy.log("EMAIL FAIL 2 " + contents)
-                        raise
-                    else:
-                        try:
-                            from email.mime.text import MIMEText
-                            msg = MIMEText(contents)
-                            msg['To'] = to
-                            msg['From'] = fromm
-                            msg['Subject'] = subject
-                            smtp.send_message(msg)
-                        except:
-                            cherrypy.log("EMAIL FAIL 3 " + contents)
-                            raise
-
     def process_all_errors(self, status, message, traceback, version):
 
-        cf = config.ConfigFile()
-        test_or_production = (cf.configfile[cf.computername]['test_or_production'])
-
-        subject = (test_or_production.upper() +
-                   ' ENVIRONMENT - Pangakupu - ' + status)
-        fromm = "orotau@webfaction.com"
-        to = "pangakupu@gmail.com"
-        contents = status + message + traceback + version
-
-        try:
-            self.send_mail(fromm, to, subject, contents)
-        except:
-            #error sending email
-            #don't raise another error
-            cherrypy.log("EMAIL FAIL 4 " + fromm)
-            cherrypy.log("EMAIL FAIL 4 " + to)
-            cherrypy.log("EMAIL FAIL 4 " + subject)
-            cherrypy.log("EMAIL FAIL 4 " + contents)
-        finally:
-            #make sure we show the correct error template, not the stack trace
-            template_id = 'error'
-            template = self.env.get_template(template_id + '.html')
-            return template.render({"template_id": template_id})
-
-    def get_mail_access_info(self, test_or_production):
-        crac = cherrypy.request.app.config
-
-        if test_or_production == "test":
-            mailbox_user = crac['gmail_mailbox']['user']
-            mailbox_password = keyring.get_password(crac['gmail_mailbox']
-                                                    ['id'], mailbox_user)
-
-        if test_or_production == "production":
-            mailbox_user = crac['webfaction_mailbox']['user']
-            mailbox_password = keyring.get_password(crac['webfaction_mailbox']
-                                                    ['id'], mailbox_user)
-        return mailbox_user, mailbox_password
+        template_id = 'error'
+        template = self.env.get_template(template_id + '.html')
+        return template.render({"template_id": template_id})
+        

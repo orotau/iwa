@@ -1060,3 +1060,222 @@ NameError: name 'keyring' is not defined
 [27/Apr/2021:19:48:59] ENGINE Bus EXITING
 [27/Apr/2021:19:48:59] ENGINE Bus EXITED
 [27/Apr/2021:19:48:59] ENGINE Waiting for child threads to terminate...
+[27/Apr/2021:19:51:17] ENGINE Listening for SIGTERM.
+[27/Apr/2021:19:51:17] ENGINE Listening for SIGHUP.
+[27/Apr/2021:19:51:17] ENGINE Listening for SIGUSR1.
+[27/Apr/2021:19:51:17] ENGINE Bus STARTING
+[27/Apr/2021:19:51:17] ENGINE Started monitor thread 'Autoreloader'.
+[27/Apr/2021:19:51:17] ENGINE Serving on http://0.0.0.0:8090
+[27/Apr/2021:19:51:17] ENGINE Bus STARTED
+[28/Apr/2021:08:56:39] HTTP 
+Traceback (most recent call last):
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/lib/encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/graham/PythonProjects/iwa/app.py", line 81, in contact
+    template = self.env.get_template(template_id + '.html')
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/jinja2/loaders.py", line 197, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: contact.html
+[28/Apr/2021:08:56:39] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 0.0.0.0:8090
+  USER-AGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:88.0) Gecko/20100101 Firefox/88.0
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  ACCEPT-LANGUAGE: mi,en-US;q=0.7,en;q=0.3
+  ACCEPT-ENCODING: gzip, deflate
+  DNT: 1
+  CONNECTION: keep-alive
+  REFERER: http://0.0.0.0:8090/iwa/about
+  UPGRADE-INSECURE-REQUESTS: 1
+  SEC-GPC: 1
+[28/Apr/2021:08:56:41]  EMAIL FAIL 2 500 Internal Server ErrorThe server encountered an unexpected condition which prevented it from fulfilling the request.Traceback (most recent call last):
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/lib/encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/graham/PythonProjects/iwa/app.py", line 81, in contact
+    template = self.env.get_template(template_id + '.html')
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/jinja2/loaders.py", line 197, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: contact.html
+18.6.0
+[28/Apr/2021:08:56:41]  EMAIL FAIL 4 orotau@webfaction.com
+[28/Apr/2021:08:56:41]  EMAIL FAIL 4 pangakupu@gmail.com
+[28/Apr/2021:08:56:41]  EMAIL FAIL 4 TEST ENVIRONMENT - Pangakupu - 500 Internal Server Error
+[28/Apr/2021:08:56:41]  EMAIL FAIL 4 500 Internal Server ErrorThe server encountered an unexpected condition which prevented it from fulfilling the request.Traceback (most recent call last):
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/lib/encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/cherrypy/_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/home/graham/PythonProjects/iwa/app.py", line 81, in contact
+    template = self.env.get_template(template_id + '.html')
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/graham/Virtual-Environments/iwa/lib/python3.8/site-packages/jinja2/loaders.py", line 197, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: contact.html
+18.6.0
+[28/Apr/2021:13:01:07] ENGINE Keyboard Interrupt: shutting down bus
+[28/Apr/2021:13:01:07] ENGINE Bus STOPPING
+[28/Apr/2021:13:01:07] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 8090)) shut down
+[28/Apr/2021:13:01:07] ENGINE Stopped thread 'Autoreloader'.
+[28/Apr/2021:13:01:07] ENGINE Bus STOPPED
+[28/Apr/2021:13:01:07] ENGINE Bus EXITING
+[28/Apr/2021:13:01:07] ENGINE Bus EXITED
+[28/Apr/2021:13:01:07] ENGINE Waiting for child threads to terminate...
+[28/Apr/2021:19:27:51] ENGINE Listening for SIGTERM.
+[28/Apr/2021:19:27:51] ENGINE Listening for SIGHUP.
+[28/Apr/2021:19:27:51] ENGINE Listening for SIGUSR1.
+[28/Apr/2021:19:27:51] ENGINE Bus STARTING
+[28/Apr/2021:19:27:51] ENGINE Started monitor thread 'Autoreloader'.
+[28/Apr/2021:19:27:52] ENGINE Serving on http://0.0.0.0:8090
+[28/Apr/2021:19:27:52] ENGINE Bus STARTED
+[29/Apr/2021:11:26:57] ENGINE Keyboard Interrupt: shutting down bus
+[29/Apr/2021:11:26:58] ENGINE Bus STOPPING
+[29/Apr/2021:11:26:58] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 8090)) shut down
+[29/Apr/2021:11:26:58] ENGINE Stopped thread 'Autoreloader'.
+[29/Apr/2021:11:26:58] ENGINE Bus STOPPED
+[29/Apr/2021:11:26:58] ENGINE Bus EXITING
+[29/Apr/2021:11:26:58] ENGINE Bus EXITED
+[29/Apr/2021:11:26:58] ENGINE Waiting for child threads to terminate...
+[01/May/2021:10:58:02] ENGINE Listening for SIGTERM.
+[01/May/2021:10:58:02] ENGINE Listening for SIGHUP.
+[01/May/2021:10:58:02] ENGINE Listening for SIGUSR1.
+[01/May/2021:10:58:02] ENGINE Bus STARTING
+[01/May/2021:10:58:02] ENGINE Started monitor thread 'Autoreloader'.
+[01/May/2021:10:58:03] ENGINE Serving on http://0.0.0.0:8090
+[01/May/2021:10:58:03] ENGINE Bus STARTED
+[01/May/2021:10:58:39] ENGINE Restarting because /home/graham/PythonProjects/iwa/app.py changed.
+[01/May/2021:10:58:39] ENGINE Stopped thread 'Autoreloader'.
+[01/May/2021:10:58:39] ENGINE Bus STOPPING
+[01/May/2021:10:58:39] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 8090)) shut down
+[01/May/2021:10:58:39] ENGINE Bus STOPPED
+[01/May/2021:10:58:39] ENGINE Bus EXITING
+[01/May/2021:10:58:39] ENGINE Bus EXITED
+[01/May/2021:10:58:39] ENGINE Waiting for child threads to terminate...
+[01/May/2021:10:58:39] ENGINE Re-spawning python serve.py
+[01/May/2021:10:58:39] ENGINE Listening for SIGTERM.
+[01/May/2021:10:58:39] ENGINE Listening for SIGHUP.
+[01/May/2021:10:58:39] ENGINE Listening for SIGUSR1.
+[01/May/2021:10:58:39] ENGINE Bus STARTING
+[01/May/2021:10:58:39] ENGINE Started monitor thread 'Autoreloader'.
+[01/May/2021:10:58:39] ENGINE Serving on http://0.0.0.0:8090
+[01/May/2021:10:58:39] ENGINE Bus STARTED
+[01/May/2021:10:59:07] ENGINE Restarting because /home/graham/PythonProjects/iwa/app.py changed.
+[01/May/2021:10:59:07] ENGINE Stopped thread 'Autoreloader'.
+[01/May/2021:10:59:07] ENGINE Bus STOPPING
+[01/May/2021:10:59:07] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 8090)) shut down
+[01/May/2021:10:59:07] ENGINE Bus STOPPED
+[01/May/2021:10:59:07] ENGINE Bus EXITING
+[01/May/2021:10:59:07] ENGINE Bus EXITED
+[01/May/2021:10:59:07] ENGINE Waiting for child threads to terminate...
+[01/May/2021:10:59:07] ENGINE Re-spawning python serve.py
+[01/May/2021:10:59:51] ENGINE Listening for SIGTERM.
+[01/May/2021:10:59:51] ENGINE Listening for SIGHUP.
+[01/May/2021:10:59:51] ENGINE Listening for SIGUSR1.
+[01/May/2021:10:59:51] ENGINE Bus STARTING
+[01/May/2021:10:59:51] ENGINE Started monitor thread 'Autoreloader'.
+[01/May/2021:10:59:51] ENGINE Serving on http://0.0.0.0:8090
+[01/May/2021:10:59:51] ENGINE Bus STARTED
+[01/May/2021:11:01:01] ENGINE Restarting because /home/graham/PythonProjects/iwa/serve.py changed.
+[01/May/2021:11:01:01] ENGINE Stopped thread 'Autoreloader'.
+[01/May/2021:11:01:01] ENGINE Bus STOPPING
+[01/May/2021:11:01:01] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 8090)) shut down
+[01/May/2021:11:01:01] ENGINE Bus STOPPED
+[01/May/2021:11:01:01] ENGINE Bus EXITING
+[01/May/2021:11:01:01] ENGINE Bus EXITED
+[01/May/2021:11:01:01] ENGINE Waiting for child threads to terminate...
+[01/May/2021:11:01:01] ENGINE Re-spawning python serve.py
+[01/May/2021:11:01:01] ENGINE Listening for SIGTERM.
+[01/May/2021:11:01:01] ENGINE Listening for SIGHUP.
+[01/May/2021:11:01:01] ENGINE Listening for SIGUSR1.
+[01/May/2021:11:01:01] ENGINE Bus STARTING
+[01/May/2021:11:01:01] ENGINE Started monitor thread 'Autoreloader'.
+[01/May/2021:11:01:01] ENGINE Serving on http://0.0.0.0:8090
+[01/May/2021:11:01:01] ENGINE Bus STARTED
+[01/May/2021:11:01:07] ENGINE Keyboard Interrupt: shutting down bus
+[01/May/2021:11:01:07] ENGINE Bus STOPPING
+[01/May/2021:11:01:07] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 8090)) shut down
+[01/May/2021:11:01:07] ENGINE Stopped thread 'Autoreloader'.
+[01/May/2021:11:01:07] ENGINE Bus STOPPED
+[01/May/2021:11:01:07] ENGINE Bus EXITING
+[01/May/2021:11:01:07] ENGINE Bus EXITED
+[01/May/2021:11:01:07] ENGINE Waiting for child threads to terminate...
+[01/May/2021:11:01:08] ENGINE Listening for SIGTERM.
+[01/May/2021:11:01:08] ENGINE Listening for SIGHUP.
+[01/May/2021:11:01:08] ENGINE Listening for SIGUSR1.
+[01/May/2021:11:01:08] ENGINE Bus STARTING
+[01/May/2021:11:01:08] ENGINE Started monitor thread 'Autoreloader'.
+[01/May/2021:11:01:08] ENGINE Serving on http://0.0.0.0:8090
+[01/May/2021:11:01:08] ENGINE Bus STARTED
+[01/May/2021:11:02:05] ENGINE Restarting because /home/graham/PythonProjects/iwa/conf/app.cfg changed.
+[01/May/2021:11:02:05] ENGINE Stopped thread 'Autoreloader'.
+[01/May/2021:11:02:05] ENGINE Bus STOPPING
+[01/May/2021:11:02:05] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 8090)) shut down
+[01/May/2021:11:02:05] ENGINE Bus STOPPED
+[01/May/2021:11:02:05] ENGINE Bus EXITING
+[01/May/2021:11:02:05] ENGINE Bus EXITED
+[01/May/2021:11:02:05] ENGINE Waiting for child threads to terminate...
+[01/May/2021:11:02:05] ENGINE Re-spawning python serve.py
+[01/May/2021:11:02:05] ENGINE Listening for SIGTERM.
+[01/May/2021:11:02:05] ENGINE Listening for SIGHUP.
+[01/May/2021:11:02:05] ENGINE Listening for SIGUSR1.
+[01/May/2021:11:02:05] ENGINE Bus STARTING
+[01/May/2021:11:02:05] ENGINE Started monitor thread 'Autoreloader'.
+[01/May/2021:11:02:05] ENGINE Serving on http://0.0.0.0:8090
+[01/May/2021:11:02:05] ENGINE Bus STARTED
+[01/May/2021:11:03:41] ENGINE Restarting because /home/graham/PythonProjects/iwa/app.py changed.
+[01/May/2021:11:03:41] ENGINE Stopped thread 'Autoreloader'.
+[01/May/2021:11:03:41] ENGINE Bus STOPPING
+[01/May/2021:11:03:41] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 8090)) shut down
+[01/May/2021:11:03:41] ENGINE Bus STOPPED
+[01/May/2021:11:03:41] ENGINE Bus EXITING
+[01/May/2021:11:03:41] ENGINE Bus EXITED
+[01/May/2021:11:03:41] ENGINE Waiting for child threads to terminate...
+[01/May/2021:11:03:41] ENGINE Re-spawning python serve.py
+[01/May/2021:11:03:41] ENGINE Listening for SIGTERM.
+[01/May/2021:11:03:41] ENGINE Listening for SIGHUP.
+[01/May/2021:11:03:41] ENGINE Listening for SIGUSR1.
+[01/May/2021:11:03:41] ENGINE Bus STARTING
+[01/May/2021:11:03:41] ENGINE Started monitor thread 'Autoreloader'.
+[01/May/2021:11:03:41] ENGINE Serving on http://0.0.0.0:8090
+[01/May/2021:11:03:41] ENGINE Bus STARTED
+[01/May/2021:15:02:38] ENGINE Keyboard Interrupt: shutting down bus
+[01/May/2021:15:02:38] ENGINE Bus STOPPING
+[01/May/2021:15:02:38] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 8090)) shut down
+[01/May/2021:15:02:38] ENGINE Stopped thread 'Autoreloader'.
+[01/May/2021:15:02:38] ENGINE Bus STOPPED
+[01/May/2021:15:02:38] ENGINE Bus EXITING
+[01/May/2021:15:02:38] ENGINE Bus EXITED
+[01/May/2021:15:02:38] ENGINE Waiting for child threads to terminate...
