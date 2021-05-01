@@ -4,7 +4,6 @@ with the words
 '''
 # import psycopg2
 import sqlite3
-import keyring
 import json
 # import xlrd
 import config
