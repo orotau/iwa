@@ -26,7 +26,7 @@ class ConfigFile():
         hostname = socket.gethostname()
         if "live" in hostname:
             return "PythonAnywhere"
-        else
+        else:
             return hostname()
 
     def getPath(self):
