@@ -8,6 +8,7 @@ autoreload = True
 
 
 [PythonAnywhere]
+sqlite3_db_path = /home/orotau/iwa.db
 iwa_path = /home/orotau/webapps/pk_cp/iwa/
 socket_host = 127.0.0.1
 socket_port = 25251
