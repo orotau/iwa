@@ -27,7 +27,7 @@ class ConfigFile():
         if "live" in hostname:
             return "PythonAnywhere"
         else:
-            return hostname()
+            return hostname
 
     def getPath(self):
         try:
